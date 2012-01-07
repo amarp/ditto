@@ -1,0 +1,30 @@
+PING 1.0.0.11 (1.0.0.11) 56(124) bytes of data.
+64 bytes from 1.0.0.11: icmp_seq=1 ttl=64 time=2.49 ms
+RR: 	1.0.0.22
+	1.0.0.11
+	1.0.0.11
+	1.0.0.22
+
+64 bytes from 1.0.0.11: icmp_seq=2 ttl=64 time=2.64 ms	(same route)
+64 bytes from 1.0.0.11: icmp_seq=3 ttl=64 time=2.28 ms	(same route)
+64 bytes from 1.0.0.11: icmp_seq=4 ttl=64 time=2.71 ms	(same route)
+64 bytes from 1.0.0.11: icmp_seq=5 ttl=64 time=2.47 ms	(same route)
+64 bytes from 1.0.0.11: icmp_seq=6 ttl=64 time=3.44 ms	(same route)
+64 bytes from 1.0.0.11: icmp_seq=7 ttl=64 time=2.39 ms	(same route)
+64 bytes from 1.0.0.11: icmp_seq=8 ttl=64 time=2.35 ms	(same route)
+64 bytes from 1.0.0.11: icmp_seq=9 ttl=64 time=2.87 ms	(same route)
+64 bytes from 1.0.0.11: icmp_seq=10 ttl=64 time=2.89 ms	(same route)
+64 bytes from 1.0.0.11: icmp_seq=11 ttl=64 time=2.56 ms	(same route)
+64 bytes from 1.0.0.11: icmp_seq=12 ttl=64 time=2.77 ms	(same route)
+64 bytes from 1.0.0.11: icmp_seq=13 ttl=64 time=2.49 ms	(same route)
+64 bytes from 1.0.0.11: icmp_seq=14 ttl=64 time=2.89 ms	(same route)
+64 bytes from 1.0.0.11: icmp_seq=15 ttl=64 time=2.59 ms	(same route)
+64 bytes from 1.0.0.11: icmp_seq=16 ttl=64 time=3.01 ms	(same route)
+64 bytes from 1.0.0.11: icmp_seq=17 ttl=64 time=2.62 ms	(same route)
+64 bytes from 1.0.0.11: icmp_seq=18 ttl=64 time=2.63 ms	(same route)
+64 bytes from 1.0.0.11: icmp_seq=19 ttl=64 time=4.21 ms	(same route)
+64 bytes from 1.0.0.11: icmp_seq=20 ttl=64 time=2.65 ms	(same route)
+
+--- 1.0.0.11 ping statistics ---
+20 packets transmitted, 20 received, 0% packet loss, time 19016ms
+rtt min/avg/max/mdev = 2.282/2.753/4.213/0.423 ms

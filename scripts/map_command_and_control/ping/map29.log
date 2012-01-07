@@ -1,0 +1,41 @@
+PING 1.0.0.11 (1.0.0.11) 56(124) bytes of data.
+From 1.0.0.30: icmp_seq=1 Redirect Host(New nexthop: 1.0.0.11)
+64 bytes from 1.0.0.11: icmp_seq=1 ttl=63 time=7.08 ms
+RR: 	1.0.0.29
+	1.0.0.30
+	1.0.0.11
+	1.0.0.11
+	1.0.0.30
+	1.0.0.29
+
+From 1.0.0.30: icmp_seq=2 Redirect Host(New nexthop: 1.0.0.11)
+64 bytes from 1.0.0.11: icmp_seq=2 ttl=63 time=5.49 ms	(same route)
+From 1.0.0.30: icmp_seq=3 Redirect Host(New nexthop: 1.0.0.11)
+64 bytes from 1.0.0.11: icmp_seq=3 ttl=63 time=6.06 ms	(same route)
+From 1.0.0.30: icmp_seq=4 Redirect Host(New nexthop: 1.0.0.11)
+64 bytes from 1.0.0.11: icmp_seq=4 ttl=63 time=6.33 ms	(same route)
+From 1.0.0.30: icmp_seq=5 Redirect Host(New nexthop: 1.0.0.11)
+64 bytes from 1.0.0.11: icmp_seq=5 ttl=63 time=5.56 ms	(same route)
+From 1.0.0.30: icmp_seq=6 Redirect Host(New nexthop: 1.0.0.11)
+64 bytes from 1.0.0.11: icmp_seq=6 ttl=63 time=4.51 ms	(same route)
+64 bytes from 1.0.0.11: icmp_seq=7 ttl=63 time=4.27 ms	(same route)
+From 1.0.0.30: icmp_seq=8 Redirect Host(New nexthop: 1.0.0.11)
+64 bytes from 1.0.0.11: icmp_seq=8 ttl=63 time=6.58 ms	(same route)
+64 bytes from 1.0.0.11: icmp_seq=9 ttl=63 time=4.21 ms	(same route)
+64 bytes from 1.0.0.11: icmp_seq=10 ttl=63 time=6.42 ms	(same route)
+From 1.0.0.30: icmp_seq=11 Redirect Host(New nexthop: 1.0.0.11)
+64 bytes from 1.0.0.11: icmp_seq=11 ttl=63 time=5.16 ms	(same route)
+64 bytes from 1.0.0.11: icmp_seq=12 ttl=63 time=6.94 ms	(same route)
+64 bytes from 1.0.0.11: icmp_seq=13 ttl=63 time=4.33 ms	(same route)
+64 bytes from 1.0.0.11: icmp_seq=14 ttl=63 time=4.33 ms	(same route)
+64 bytes from 1.0.0.11: icmp_seq=15 ttl=63 time=4.33 ms	(same route)
+64 bytes from 1.0.0.11: icmp_seq=16 ttl=63 time=4.32 ms	(same route)
+From 1.0.0.30: icmp_seq=17 Redirect Host(New nexthop: 1.0.0.11)
+64 bytes from 1.0.0.11: icmp_seq=17 ttl=63 time=4.53 ms	(same route)
+64 bytes from 1.0.0.11: icmp_seq=18 ttl=63 time=3.97 ms	(same route)
+64 bytes from 1.0.0.11: icmp_seq=19 ttl=63 time=5.56 ms	(same route)
+64 bytes from 1.0.0.11: icmp_seq=20 ttl=63 time=4.57 ms	(same route)
+
+--- 1.0.0.11 ping statistics ---
+20 packets transmitted, 20 received, 0% packet loss, time 19016ms
+rtt min/avg/max/mdev = 3.979/5.232/7.081/1.001 ms

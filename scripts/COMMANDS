@@ -1,0 +1,63 @@
+perl control-1.pl MAP.TXT expt1 map13:file1:map22:a08105f95813336e5cb2451f28409c33c7378653
+
+perl setup/setup.pl MAP.TXT map
+
+grep "STAT" ../op.crap > code/XPUT
+
+perl metric.pl XPUT > code/XPUTMETRIC
+
+=====
+
+ssh-agent /bin/tcsh
+ssh-add ~/.ssh/map_hpucha
+
+time ./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'hostname'"
+perl setup/add-route.pl TOPOS/MAP.TXT map setup/code/feb27/PATH-ath 0
+perl control-0.pl MAP.txt map map11 5000 MAP.txt
+
+perl control-0.pl emu.txt emulab nodew1.ditto.netarch.emulab.net 5000 emu_recvr.txt
+
+-----
+
+perl control-1.pl MAP.TXT expt1 map13:file1:map22:a08105f95813336e5cb2451f28409c33c7378653
+
+perl setup/setup.pl MAP.TXT map
+perl setup/add-route.pl TOPOS/T1.TXT map TOPOS/PATHS-T1 0
+
+grep "STAT" ../op.crap > code/XPUT
+
+perl metric.pl XPUT > code/XPUTMETRIC
+
+--------------------------
+packetsizes
+
+time ./do-perhost.pl -t 120 -c 200 -f TOPOS/T1.TXT "ssh @HOST@ 'sudo killall tcpdump'"
+
+
+ssh map11 'sudo tcpdump -i ath0 -w /tmp/dot/tcpdump.log -s 1600 'tcp and not port 22 and host 1.0.0.11' >& /dev/null &'
+ssh map29 'sudo tcpdump -i ath0 -w /tmp/dot/tcpdump.log -s 1600 'tcp and not port 22 and host 1.0.0.29' >& /dev/null &'
+ssh map34 'sudo tcpdump -i ath0 -w /tmp/dot/tcpdump.log -s 1600 'tcp and not port 22 and host 1.0.0.34' >& /dev/null &'
+
+--------------------------
+
+perl setup/route-gw.pl MAP.TXT map >& crap
+
+
+-----> to reset cards, uncomment function in setup.pl and run  
+
+perl setup/setup.pl TOPOS/MAP.TXT map
+
+-----> to measure all pair xputs
+
+perl setup/route.pl TOPOS/MAP.TXT map >& setup/code/ath.crap
+cd setup/code;
+grep "STAT" ath.crap > XPUT-ath
+perl ../metric.pl XPUT-ath > XPUTMETRIC-ath
+check rpp.c to figure out which destinations do not have routes in main
+./rpp.exe cf XPUTMETRIC-ath 38 1 traffic_file > ROUTE-ath
+extract paths to PATH-ath
+
+perl setup/add-route.pl TOPOS/MAP.TXT map setup/code/PATH-ath 0
+perl setup/setup.pl TOPOS/MAP.TXT map    [for pings to and from gateway]
+
+perl control-0.pl MAP.txt map map11 5000 MAP.txt

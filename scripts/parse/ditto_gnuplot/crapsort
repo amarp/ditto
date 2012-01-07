@@ -1,0 +1,22 @@
+#!/usr/bin/env ruby
+a = Array.new
+ARGF.each_line { |l|
+  a << l.chomp
+}
+
+def sorttwo(x, y)
+  xkeys = x.split
+  ykeys = y.split
+  xk1 = xkeys[2].to_f
+  xk2 = xkeys[4].to_f
+  yk1 = ykeys[2].to_f
+  yk2 = ykeys[4].to_f
+  if (xk1 == yk1)
+    return xk2 <=> yk2
+  else
+    return xk1 <=> yk1
+  end
+end
+
+as = a.sort { |x,y| sorttwo(x,y) }
+puts as.join("\n")

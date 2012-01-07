@@ -1,0 +1,9 @@
+***SniffTCP needs IP??
+
+
+I am assuming that all the files a node needs are in a tar file all.tar.gz
+
+These files will be unpacked into /tmp/dot at the remote end.
+
+On untarring, I assume that dot binaries are in /tmp/dot/build/gtcd/, conf files are in /tmp/dot/conf/
+

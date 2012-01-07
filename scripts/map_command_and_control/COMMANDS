@@ -1,0 +1,9 @@
+perl control-1.pl MAP.TXT expt1 map13:file1:map22:a08105f95813336e5cb2451f28409c33c7378653
+
+perl setup/setup.pl MAP.TXT map
+
+grep "STAT" ../op.crap > code/XPUT
+
+perl metric.pl XPUT > code/XPUTMETRIC
+
+perl control-0.pl MAP.TXT map map11 5000 MAP.TXT > & out.txt

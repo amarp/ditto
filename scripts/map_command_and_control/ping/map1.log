@@ -1,0 +1,41 @@
+PING 1.0.0.11 (1.0.0.11) 56(124) bytes of data.
+From 1.0.0.13: icmp_seq=1 Redirect Host(New nexthop: 1.0.0.30)
+64 bytes from 1.0.0.11: icmp_seq=1 ttl=62 time=17.7 ms
+RR: 	1.0.0.1
+	1.0.0.13
+	1.0.0.30
+	1.0.0.11
+	1.0.0.11
+	1.0.0.30
+	1.0.0.13
+	1.0.0.1
+
+From 1.0.0.13: icmp_seq=2 Redirect Host(New nexthop: 1.0.0.30)
+64 bytes from 1.0.0.11: icmp_seq=2 ttl=62 time=8.53 ms	(same route)
+From 1.0.0.13: icmp_seq=4 Redirect Host(New nexthop: 1.0.0.30)
+64 bytes from 1.0.0.11: icmp_seq=4 ttl=62 time=9.61 ms	(same route)
+From 1.0.0.13: icmp_seq=5 Redirect Host(New nexthop: 1.0.0.30)
+64 bytes from 1.0.0.11: icmp_seq=5 ttl=62 time=8.18 ms	(same route)
+From 1.0.0.13: icmp_seq=6 Redirect Host(New nexthop: 1.0.0.30)
+64 bytes from 1.0.0.11: icmp_seq=6 ttl=62 time=9.01 ms	(same route)
+From 1.0.0.13: icmp_seq=7 Redirect Host(New nexthop: 1.0.0.30)
+64 bytes from 1.0.0.11: icmp_seq=7 ttl=62 time=8.73 ms	(same route)
+From 1.0.0.13: icmp_seq=9 Redirect Host(New nexthop: 1.0.0.30)
+64 bytes from 1.0.0.11: icmp_seq=9 ttl=62 time=10.9 ms	(same route)
+64 bytes from 1.0.0.11: icmp_seq=10 ttl=62 time=6.91 ms	(same route)
+64 bytes from 1.0.0.11: icmp_seq=11 ttl=62 time=8.28 ms	(same route)
+From 1.0.0.13: icmp_seq=12 Redirect Host(New nexthop: 1.0.0.30)
+64 bytes from 1.0.0.11: icmp_seq=12 ttl=62 time=8.29 ms	(same route)
+64 bytes from 1.0.0.11: icmp_seq=13 ttl=62 time=8.79 ms	(same route)
+64 bytes from 1.0.0.11: icmp_seq=14 ttl=62 time=9.71 ms	(same route)
+64 bytes from 1.0.0.11: icmp_seq=15 ttl=62 time=6.75 ms	(same route)
+64 bytes from 1.0.0.11: icmp_seq=16 ttl=62 time=6.88 ms	(same route)
+64 bytes from 1.0.0.11: icmp_seq=17 ttl=62 time=10.8 ms	(same route)
+From 1.0.0.13: icmp_seq=18 Redirect Host(New nexthop: 1.0.0.30)
+64 bytes from 1.0.0.11: icmp_seq=18 ttl=62 time=7.70 ms	(same route)
+64 bytes from 1.0.0.11: icmp_seq=19 ttl=62 time=7.29 ms	(same route)
+64 bytes from 1.0.0.11: icmp_seq=20 ttl=62 time=6.78 ms	(same route)
+
+--- 1.0.0.11 ping statistics ---
+20 packets transmitted, 18 received, 10% packet loss, time 19015ms
+rtt min/avg/max/mdev = 6.755/8.946/17.731/2.471 ms

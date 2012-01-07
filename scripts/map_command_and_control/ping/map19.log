@@ -1,0 +1,36 @@
+PING 1.0.0.11 (1.0.0.11) 56(124) bytes of data.
+From 1.0.0.4: icmp_seq=1 Redirect Host(New nexthop: 1.0.0.37)
+From 1.0.0.4: icmp_seq=2 Redirect Host(New nexthop: 1.0.0.37)
+From 1.0.0.4: icmp_seq=3 Redirect Host(New nexthop: 1.0.0.37)
+From 1.0.0.4: icmp_seq=4 Redirect Host(New nexthop: 1.0.0.37)
+From 1.0.0.4: icmp_seq=5 Redirect Host(New nexthop: 1.0.0.37)
+From 1.0.0.4: icmp_seq=6 Redirect Host(New nexthop: 1.0.0.37)
+64 bytes from 1.0.0.11: icmp_seq=6 ttl=62 time=1055 ms
+RR: 	1.0.0.19
+	1.0.0.4
+	1.0.0.37
+	1.0.0.11
+	1.0.0.11
+	1.0.0.37
+	1.0.0.4
+	1.0.0.19
+
+64 bytes from 1.0.0.11: icmp_seq=7 ttl=62 time=60.2 ms	(same route)
+From 1.0.0.4: icmp_seq=8 Redirect Host(New nexthop: 1.0.0.37)
+64 bytes from 1.0.0.11: icmp_seq=8 ttl=62 time=47.7 ms	(same route)
+64 bytes from 1.0.0.11: icmp_seq=10 ttl=62 time=37.9 ms	(same route)
+64 bytes from 1.0.0.11: icmp_seq=11 ttl=62 time=16.0 ms	(same route)
+64 bytes from 1.0.0.11: icmp_seq=12 ttl=62 time=26.7 ms	(same route)
+64 bytes from 1.0.0.11: icmp_seq=13 ttl=62 time=46.9 ms	(same route)
+64 bytes from 1.0.0.11: icmp_seq=14 ttl=62 time=16.0 ms	(same route)
+64 bytes from 1.0.0.11: icmp_seq=15 ttl=62 time=31.2 ms	(same route)
+64 bytes from 1.0.0.11: icmp_seq=16 ttl=62 time=10.1 ms	(same route)
+From 1.0.0.4: icmp_seq=17 Redirect Host(New nexthop: 1.0.0.37)
+64 bytes from 1.0.0.11: icmp_seq=17 ttl=62 time=20.9 ms	(same route)
+64 bytes from 1.0.0.11: icmp_seq=18 ttl=62 time=31.3 ms	(same route)
+64 bytes from 1.0.0.11: icmp_seq=19 ttl=62 time=26.6 ms	(same route)
+64 bytes from 1.0.0.11: icmp_seq=20 ttl=62 time=27.8 ms	(same route)
+
+--- 1.0.0.11 ping statistics ---
+20 packets transmitted, 14 received, 30% packet loss, time 19014ms
+rtt min/avg/max/mdev = 10.100/103.952/1055.357/264.206 ms, pipe 2

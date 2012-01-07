@@ -1,0 +1,17 @@
+Exec:  ./check.pl map1 gcp
+Exec:  ./check.pl map3 gcp
+Exec:  ./check.pl map5 gcp
+Exec:  ./check.pl map7 gcp
+Exec:  ./check.pl map14 gcp
+Exec:  ./check.pl map15 gcp
+Exec:  ./check.pl map16 gcp
+Exec:  ./check.pl map28 gcp
+BAD HOST NAME="map5"
+BAD HOST NAME="map1"
+BAD HOST NAME="map3"
+BAD HOST NAME="map7"
+BAD HOST NAME="map14"
+BAD HOST NAME="map15"
+BAD HOST NAME="map28"
+BAD HOST NAME="map16"
+

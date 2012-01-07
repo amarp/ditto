@@ -1,0 +1,24 @@
+STAT map1 map7 1270 Kbits/sec || map13 1412 Kbits/sec || map14 -1 || map16 2607 Kbits/sec || map25 3124 Kbits/sec || map38 -1 || 
+STAT map2 map12 -1 || map13 -1 || map14 -1 || map15 -1 || map16 -1 || map22 819 Kbits/sec || map37 4882 Kbits/sec || 
+STAT map3 map5 5109 Kbits/sec || map7 4846 Kbits/sec || map11 -1 || map13 1825 Kbits/sec || map16 3321 Kbits/sec || map22 -1 || map28 2964 Kbits/sec || map29 4772 Kbits/sec || map30 3828 Kbits/sec || 
+STAT map4 map11 -1 || map13 -1 || map15 -1 || map16 -1 || map19 3571 Kbits/sec || map22 -1 || map27 1997 Kbits/sec || map34 -1 || map37 -1 || 
+STAT map5 map3 4855 Kbits/sec || map4 -1 || map7 3746 Kbits/sec || map11 2140 Kbits/sec || map13 4494 Kbits/sec || map18 375 Kbits/sec || map22 2042 Kbits/sec || map28 4358 Kbits/sec || map29 4859 Kbits/sec || map30 4896 Kbits/sec || map34 -1 || 
+STAT map7 map1 4416 Kbits/sec || map3 4959 Kbits/sec || map5 2865 Kbits/sec || map13 -1 || map16 -1 || map25 -1 || map28 -1 || map29 3040 Kbits/sec || map30 -1 || 
+STAT map11 map4 -1 || map5 534 Kbits/sec || map14 -1 || map22 7.22 Kbits/sec || map29 -1 || map30 3072 Kbits/sec || map34 2627 Kbits/sec || map37 4646 Kbits/sec || 
+STAT map12 map2 -1 || map15 -1 || map16 -1 || 
+STAT map13 map1 4405 Kbits/sec || map2 -1 || map3 -1 || map4 -1 || map5 4418 Kbits/sec || map7 -1 || map14 -1 || map15 2879 Kbits/sec || map16 4980 Kbits/sec || map22 5155 Kbits/sec || map29 4698 Kbits/sec || map30 4672 Kbits/sec || 
+STAT map14 map1 -1 || map2 3742 Kbits/sec || map11 5175 Kbits/sec || map13 815 Kbits/sec || map15 84.0 Kbits/sec || map16 1029 Kbits/sec || map22 5163 Kbits/sec || 
+STAT map15 map2 -1 || map4 740 Kbits/sec || map12 -1 || map13 -1 || map14 -1 || map16 2093 Kbits/sec || map22 3498 Kbits/sec || map27 -1 || 
+STAT map16 map1 4973 Kbits/sec || map2 -1 || map3 4419 Kbits/sec || map4 -1 || map5 -1 || map7 3885 Kbits/sec || map12 276 Kbits/sec || map13 4187 Kbits/sec || map14 -1 || map15 4113 Kbits/sec || map22 393 Kbits/sec || map25 -1 || map29 2391 Kbits/sec || map30 -1 || map38 2605 Kbits/sec || 
+STAT map18 map5 -1 || 
+STAT map19 map4 4023 Kbits/sec || map15 -1 || map27 2340 Kbits/sec || 
+STAT map22 map2 4040 Kbits/sec || map4 -1 || map5 2707 Kbits/sec || map11 2715 Kbits/sec || map13 5144 Kbits/sec || map14 -1 || map15 4896 Kbits/sec || map16 -1 || 
+STAT map25 map1 4092 Kbits/sec || map7 -1 || map16 159 Kbits/sec || map38 2637 Kbits/sec || 
+STAT map27 map4 4218 Kbits/sec || map15 -1 || map19 2891 Kbits/sec || map29 2258 Kbits/sec || map30 503 Kbits/sec || map34 4733 Kbits/sec || 
+STAT map28 map3 -1 || map5 3469 Kbits/sec || map7 -1 || map16 -1 || map18 717 Kbits/sec || map29 4437 Kbits/sec || map30 3905 Kbits/sec || 
+STAT map29 map3 5293 Kbits/sec || map5 4948 Kbits/sec || map7 4694 Kbits/sec || map11 -1 || map13 2497 Kbits/sec || map16 2248 Kbits/sec || map18 -1 || map27 4726 Kbits/sec || map28 3844 Kbits/sec || map30 4629 Kbits/sec || map34 5548 Kbits/sec || 
+STAT map30 map3 -1 || map5 4849 Kbits/sec || map7 -1 || map11 2061 Kbits/sec || map13 4388 Kbits/sec || map16 -1 || map27 -1 || map28 -1 || map29 5547 Kbits/sec || map34 4853 Kbits/sec || 
+STAT map31 
+STAT map34 map4 -1 || map5 -1 || map11 1398 Kbits/sec || map27 4237 Kbits/sec || map28 -1 || map29 5013 Kbits/sec || map30 4803 Kbits/sec || 
+STAT map37 map2 4748 Kbits/sec || map4 2171 Kbits/sec || map5 -1 || map11 3121 Kbits/sec || 
+STAT map38 map1 -1 || map16 3392 Kbits/sec || map25 4122 Kbits/sec || 

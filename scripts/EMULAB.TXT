@@ -1,0 +1,4 @@
+NODE_ID="10490" HOST NAME="nodew1.ditto.cmu849.emulab.net" IP="nodew1.ditto.cmu849.emulab.net" BWLIMIT="1" SITE_ID="10141"
+NODE_ID="10490" HOST NAME="nodew2.ditto.cmu849.emulab.net" IP="nodew2.ditto.cmu849.emulab.net" BWLIMIT="1" SITE_ID="10141"
+NODE_ID="10490" HOST NAME="nodew3.ditto.cmu849.emulab.net" IP="nodew3.ditto.cmu849.emulab.net" BWLIMIT="1" SITE_ID="10141"
+NODE_ID="10490" HOST NAME="nodew7.ditto.cmu849.emulab.net" IP="nodew7.ditto.cmu849.emulab.net" BWLIMIT="1" SITE_ID="10141"

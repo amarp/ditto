@@ -1,0 +1,40 @@
+CHANGE SHELL to BASH on sn***
+
+Run offline.pl from /tmp/ if there is a shared directory space.
+it needs gcp.crap to cp out from where offline.pl is run
+
+****Parsing xputs on sn001
+
+on sn002
+
+perl offline.pl /disk/sn002_01/raw/p2p/ditto/expt-ath /disk/sn002_01/raw/p2p/ditto/all.tar.gz > /disk/sn002_01/raw/p2p/ditto/expt-ath/1b.crap
+
+cd parse;
+
+./analyze_1.rb map ../expt-ath/ ../expt-ath/recvrs.txt 3 1 ../expt-ath/sniffers.txt > & ../expt-ath/2.crap
+mv ../expt-ath/results ../expt-ath/xput-results
+mv ../expt-wlan//results ../expt-wlan//xput-results
+
+#dot-ohear
+perl analyze_offline.rb map ../expt-ath/ ../expt-ath/recvrs.txt 3 1 ../expt-ath/sniffers.txt > & ../expt-ath/4.crap
+#offline
+perl analyze_offline.rb map ../expt-ath/ ../expt-ath/recvrs.txt 3 0 ../expt-ath/sniffers.txt > & ../expt-ath/4a.crap
+
+#dot-ohear
+perl analyze_offline.rb map ../expt-wlan/ ../expt-wlan/recvrs.txt 3 1 ../expt-wlan/sniffers.txt > & ../expt-wlan/4.crap
+#offline
+perl analyze_offline.rb map ../expt-wlan/ ../expt-wlan/recvrs.txt 3 0 ../expt-wlan/sniffers.txt > & ../expt-wlan/4a.crap
+
+get results to localhost
+get xput-results to localhost
+
+***On localhost
+
+perl graph_xput.pl ../results/RECVRS.TXT ../results/expt-ath/xput-results/ > & ../results/expt-ath/3.crap
+perl graph_node.pl ../results/RECVRS.TXT ../results/expt-ath/results/ ../results/expt-ath/PATH-ath > & ../results/expt-ath/5.crap
+#perl graph_node.pl ../results/RECVRS.TXT ../results/expt-ath/results/ > & ../results/expt-ath/5.crap
+
+perl graph_xput.pl ../results/RECVRS.TXT ../results/expt-wlan/xput-results/ > & ../results/expt-wlan/3.crap
+
+perl graph_xput.pl ../results/RECVRS.TXT ../results/expt-athhighp/xput-results/ > & ../results/expt-athhighp/3.crap
+perl graph_node.pl ../results/RECVRS.TXT ../results/expt-athhighp/results/ ../results/expt-athhighp//PATH-athhighp > & ../results/expt-athhighp//5.crap

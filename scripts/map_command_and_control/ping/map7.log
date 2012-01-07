@@ -1,0 +1,42 @@
+PING 1.0.0.11 (1.0.0.11) 56(124) bytes of data.
+From 1.0.0.29: icmp_seq=1 Redirect Host(New nexthop: 1.0.0.30)
+64 bytes from 1.0.0.11: icmp_seq=1 ttl=62 time=10.6 ms
+RR: 	1.0.0.7
+	1.0.0.29
+	1.0.0.30
+	1.0.0.11
+	1.0.0.11
+	1.0.0.30
+	1.0.0.29
+	1.0.0.7
+
+From 1.0.0.29: icmp_seq=2 Redirect Host(New nexthop: 1.0.0.30)
+64 bytes from 1.0.0.11: icmp_seq=2 ttl=62 time=7.42 ms	(same route)
+From 1.0.0.29: icmp_seq=3 Redirect Host(New nexthop: 1.0.0.30)
+64 bytes from 1.0.0.11: icmp_seq=3 ttl=62 time=8.47 ms	(same route)
+From 1.0.0.29: icmp_seq=4 Redirect Host(New nexthop: 1.0.0.30)
+64 bytes from 1.0.0.11: icmp_seq=4 ttl=62 time=7.25 ms	(same route)
+From 1.0.0.29: icmp_seq=5 Redirect Host(New nexthop: 1.0.0.30)
+64 bytes from 1.0.0.11: icmp_seq=5 ttl=62 time=8.43 ms	(same route)
+From 1.0.0.29: icmp_seq=6 Redirect Host(New nexthop: 1.0.0.30)
+64 bytes from 1.0.0.11: icmp_seq=6 ttl=62 time=9.95 ms	(same route)
+64 bytes from 1.0.0.11: icmp_seq=7 ttl=62 time=8.74 ms	(same route)
+From 1.0.0.29: icmp_seq=8 Redirect Host(New nexthop: 1.0.0.30)
+64 bytes from 1.0.0.11: icmp_seq=8 ttl=62 time=6.71 ms	(same route)
+64 bytes from 1.0.0.11: icmp_seq=9 ttl=62 time=6.41 ms	(same route)
+64 bytes from 1.0.0.11: icmp_seq=10 ttl=62 time=6.87 ms	(same route)
+From 1.0.0.29: icmp_seq=11 Redirect Host(New nexthop: 1.0.0.30)
+64 bytes from 1.0.0.11: icmp_seq=11 ttl=62 time=7.53 ms	(same route)
+64 bytes from 1.0.0.11: icmp_seq=13 ttl=62 time=7.69 ms	(same route)
+64 bytes from 1.0.0.11: icmp_seq=14 ttl=62 time=6.55 ms	(same route)
+64 bytes from 1.0.0.11: icmp_seq=15 ttl=62 time=5.67 ms	(same route)
+64 bytes from 1.0.0.11: icmp_seq=16 ttl=62 time=6.97 ms	(same route)
+From 1.0.0.29: icmp_seq=17 Redirect Host(New nexthop: 1.0.0.30)
+64 bytes from 1.0.0.11: icmp_seq=17 ttl=62 time=7.09 ms	(same route)
+64 bytes from 1.0.0.11: icmp_seq=18 ttl=62 time=5.96 ms	(same route)
+64 bytes from 1.0.0.11: icmp_seq=19 ttl=62 time=6.77 ms	(same route)
+64 bytes from 1.0.0.11: icmp_seq=20 ttl=62 time=8.06 ms	(same route)
+
+--- 1.0.0.11 ping statistics ---
+20 packets transmitted, 19 received, 5% packet loss, time 19015ms
+rtt min/avg/max/mdev = 5.671/7.540/10.649/1.245 ms

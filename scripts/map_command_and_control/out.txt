@@ -1,0 +1,922 @@
+perl setup/setup.pl TOPOS/MAP.TXT map
+dd if=/dev/urandom of=file-map11 bs=1024 count=1024
+1024+0 records in
+1024+0 records out
+openssl sha1 file-map11
+321e7ce10a9589193ae5745d3873351ce3aaebeb
+PERRECVR map25
+Sun Mar  9 12:05:31 EST 2008
+perl control-1.pl TOPOS/MAP.TXT expt-map25 map11:file-map11:map25:321e7ce10a9589193ae5745d3873351ce3aaebeb
+ssh map1 "/sbin/ifconfig | grep '1\.0\.0' | awk '{print $2}'"
+map1 ----->           inet addr:1.0.0.1  Bcast:1.0.0.255  Mask:255.255.255.0 -----> 1.0.0.1
+ssh map2 "/sbin/ifconfig | grep '1\.0\.0' | awk '{print $2}'"
+map2 ----->           inet addr:1.0.0.2  Bcast:1.0.0.255  Mask:255.255.255.0 -----> 1.0.0.2
+ssh map3 "/sbin/ifconfig | grep '1\.0\.0' | awk '{print $2}'"
+map3 ----->           inet addr:1.0.0.3  Bcast:1.0.0.255  Mask:255.255.255.0 -----> 1.0.0.3
+ssh map4 "/sbin/ifconfig | grep '1\.0\.0' | awk '{print $2}'"
+map4 ----->           inet addr:1.0.0.4  Bcast:1.0.0.255  Mask:255.255.255.0 -----> 1.0.0.4
+ssh map5 "/sbin/ifconfig | grep '1\.0\.0' | awk '{print $2}'"
+map5 ----->           inet addr:1.0.0.5  Bcast:1.0.0.255  Mask:255.255.255.0 -----> 1.0.0.5
+ssh map7 "/sbin/ifconfig | grep '1\.0\.0' | awk '{print $2}'"
+map7 ----->           inet addr:1.0.0.7  Bcast:1.0.0.255  Mask:255.255.255.0 -----> 1.0.0.7
+ssh map11 "/sbin/ifconfig | grep '1\.0\.0' | awk '{print $2}'"
+map11 ----->           inet addr:1.0.0.11  Bcast:1.0.0.255  Mask:255.255.255.0 -----> 1.0.0.11
+ssh map12 "/sbin/ifconfig | grep '1\.0\.0' | awk '{print $2}'"
+map12 ----->           inet addr:1.0.0.12  Bcast:1.0.0.255  Mask:255.255.255.0 -----> 1.0.0.12
+ssh map13 "/sbin/ifconfig | grep '1\.0\.0' | awk '{print $2}'"
+map13 ----->           inet addr:1.0.0.13  Bcast:1.0.0.255  Mask:255.255.255.0 -----> 1.0.0.13
+ssh map14 "/sbin/ifconfig | grep '1\.0\.0' | awk '{print $2}'"
+map14 ----->           inet addr:1.0.0.14  Bcast:1.0.0.255  Mask:255.255.255.0 -----> 1.0.0.14
+ssh map15 "/sbin/ifconfig | grep '1\.0\.0' | awk '{print $2}'"
+map15 ----->           inet addr:1.0.0.15  Bcast:1.0.0.255  Mask:255.255.255.0 -----> 1.0.0.15
+ssh map16 "/sbin/ifconfig | grep '1\.0\.0' | awk '{print $2}'"
+map16 ----->           inet addr:1.0.0.16  Bcast:1.0.0.255  Mask:255.255.255.0 -----> 1.0.0.16
+ssh map18 "/sbin/ifconfig | grep '1\.0\.0' | awk '{print $2}'"
+map18 ----->           inet addr:1.0.0.18  Bcast:1.0.0.255  Mask:255.255.255.0 -----> 1.0.0.18
+ssh map19 "/sbin/ifconfig | grep '1\.0\.0' | awk '{print $2}'"
+map19 ----->           inet addr:1.0.0.19  Bcast:1.0.0.255  Mask:255.255.255.0 -----> 1.0.0.19
+ssh map22 "/sbin/ifconfig | grep '1\.0\.0' | awk '{print $2}'"
+map22 ----->           inet addr:1.0.0.22  Bcast:1.0.0.255  Mask:255.255.255.0 -----> 1.0.0.22
+ssh map25 "/sbin/ifconfig | grep '1\.0\.0' | awk '{print $2}'"
+map25 ----->           inet addr:1.0.0.25  Bcast:1.0.0.255  Mask:255.255.255.0 -----> 1.0.0.25
+ssh map27 "/sbin/ifconfig | grep '1\.0\.0' | awk '{print $2}'"
+map27 ----->           inet addr:1.0.0.27  Bcast:1.0.0.255  Mask:255.255.255.0 -----> 1.0.0.27
+ssh map28 "/sbin/ifconfig | grep '1\.0\.0' | awk '{print $2}'"
+map28 ----->           inet addr:1.0.0.28  Bcast:1.0.0.255  Mask:255.255.255.0 -----> 1.0.0.28
+ssh map29 "/sbin/ifconfig | grep '1\.0\.0' | awk '{print $2}'"
+map29 ----->           inet addr:1.0.0.29  Bcast:1.0.0.255  Mask:255.255.255.0 -----> 1.0.0.29
+ssh map30 "/sbin/ifconfig | grep '1\.0\.0' | awk '{print $2}'"
+map30 ----->           inet addr:1.0.0.30  Bcast:1.0.0.255  Mask:255.255.255.0 -----> 1.0.0.30
+ssh map31 "/sbin/ifconfig | grep '1\.0\.0' | awk '{print $2}'"
+map31 ----->           inet addr:1.0.0.31  Bcast:1.0.0.255  Mask:255.255.255.0 -----> 1.0.0.31
+ssh map34 "/sbin/ifconfig | grep '1\.0\.0' | awk '{print $2}'"
+map34 ----->           inet addr:1.0.0.34  Bcast:1.0.0.255  Mask:255.255.255.0 -----> 1.0.0.34
+ssh map37 "/sbin/ifconfig | grep '1\.0\.0' | awk '{print $2}'"
+map37 ----->           inet addr:1.0.0.37  Bcast:1.0.0.255  Mask:255.255.255.0 -----> 1.0.0.37
+ssh map38 "/sbin/ifconfig | grep '1\.0\.0' | awk '{print $2}'"
+map38 ----->           inet addr:1.0.0.38  Bcast:1.0.0.255  Mask:255.255.255.0 -----> 1.0.0.38
+--------------------------------------------
+time ./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo killall -9 gtcd_16K gcp sniffTcp_16K && rm -f /tmp/dot/out '"
+Exec:  ssh map1 'sudo killall -9 gtcd_16K gcp sniffTcp_16K && rm -f /tmp/dot/out '
+Exec:  ssh map2 'sudo killall -9 gtcd_16K gcp sniffTcp_16K && rm -f /tmp/dot/out '
+Exec:  ssh map3 'sudo killall -9 gtcd_16K gcp sniffTcp_16K && rm -f /tmp/dot/out '
+Exec:  ssh map4 'sudo killall -9 gtcd_16K gcp sniffTcp_16K && rm -f /tmp/dot/out '
+Exec:  ssh map5 'sudo killall -9 gtcd_16K gcp sniffTcp_16K && rm -f /tmp/dot/out '
+Exec:  ssh map7 'sudo killall -9 gtcd_16K gcp sniffTcp_16K && rm -f /tmp/dot/out '
+Exec:  ssh map11 'sudo killall -9 gtcd_16K gcp sniffTcp_16K && rm -f /tmp/dot/out '
+Exec:  ssh map12 'sudo killall -9 gtcd_16K gcp sniffTcp_16K && rm -f /tmp/dot/out '
+Exec:  ssh map13 'sudo killall -9 gtcd_16K gcp sniffTcp_16K && rm -f /tmp/dot/out '
+Exec:  ssh map14 'sudo killall -9 gtcd_16K gcp sniffTcp_16K && rm -f /tmp/dot/out '
+Exec:  ssh map15 'sudo killall -9 gtcd_16K gcp sniffTcp_16K && rm -f /tmp/dot/out '
+Exec:  ssh map16 'sudo killall -9 gtcd_16K gcp sniffTcp_16K && rm -f /tmp/dot/out '
+Exec:  ssh map19 'sudo killall -9 gtcd_16K gcp sniffTcp_16K && rm -f /tmp/dot/out '
+Exec:  ssh map22 'sudo killall -9 gtcd_16K gcp sniffTcp_16K && rm -f /tmp/dot/out '
+gtcd_16K: no process killed
+gcp: no process killed
+sniffTcp_16K: no process killed
+Exec:  ssh map25 'sudo killall -9 gtcd_16K gcp sniffTcp_16K && rm -f /tmp/dot/out '
+Exec:  ssh map27 'sudo killall -9 gtcd_16K gcp sniffTcp_16K && rm -f /tmp/dot/out '
+Exec:  ssh map28 'sudo killall -9 gtcd_16K gcp sniffTcp_16K && rm -f /tmp/dot/out '
+Exec:  ssh map29 'sudo killall -9 gtcd_16K gcp sniffTcp_16K && rm -f /tmp/dot/out '
+gtcd_16K: no process killed
+gcp: no process killed
+sniffTcp_16K: no process killed
+gtcd_16K: no process killed
+gcp: no process killed
+sniffTcp_16K: no process killed
+gtcd_16K: no process killed
+gcp: no process killed
+sniffTcp_16K: no process killed
+gtcd_16K: no process killed
+gcp: no process killed
+sniffTcp_16K: no process killed
+Exec:  ssh map31 'sudo killall -9 gtcd_16K gcp sniffTcp_16K && rm -f /tmp/dot/out '
+Exec:  ssh map34 'sudo killall -9 gtcd_16K gcp sniffTcp_16K && rm -f /tmp/dot/out '
+Exec:  ssh map37 'sudo killall -9 gtcd_16K gcp sniffTcp_16K && rm -f /tmp/dot/out '
+gtcd_16K: no process killed
+gcp: no process killed
+sniffTcp_16K: no process killed
+gtcd_16K: no process killed
+gcp: no process killed
+sniffTcp_16K: no process killed
+Exec:  ssh map38 'sudo killall -9 gtcd_16K gcp sniffTcp_16K && rm -f /tmp/dot/out '
+Exec:  ssh map18 'sudo killall -9 gtcd_16K gcp sniffTcp_16K && rm -f /tmp/dot/out '
+gtcd_16K: no process killed
+gcp: no process killed
+sniffTcp_16K: no process killed
+gtcd_16K: no process killed
+gcp: no process killed
+sniffTcp_16K: no process killed
+gtcd_16K: no process killed
+gcp: no process killed
+sniffTcp_16K: no process killed
+gtcd_16K: no process killed
+gcp: no process killed
+sniffTcp_16K: no process killed
+gtcd_16K: no process killed
+gtcd_16K: no process killed
+gcp: no process killed
+gcp: no process killed
+sniffTcp_16K: no process killed
+sniffTcp_16K: no process killed
+gtcd_16K: no process killed
+gcp: no process killed
+sniffTcp_16K: no process killed
+gtcd_16K: no process killed
+gcp: no process killed
+sniffTcp_16K: no process killed
+gtcd_16K: no process killed
+gcp: no process killed
+sniffTcp_16K: no process killed
+gtcd_16K: no process killed
+gcp: no process killed
+sniffTcp_16K: no process killed
+gtcd_16K: no process killed
+gcp: no process killed
+sniffTcp_16K: no process killed
+gtcd_16K: no process killed
+gcp: no process killed
+sniffTcp_16K: no process killed
+gtcd_16K: no process killed
+gcp: no process killed
+sniffTcp_16K: no process killed
+Exec:  ssh map30 'sudo killall -9 gtcd_16K gcp sniffTcp_16K && rm -f /tmp/dot/out '
+gtcd_16K: no process killed
+gcp: no process killed
+sniffTcp_16K: no process killed
+gtcd_16K: no process killed
+gcp: no process killed
+sniffTcp_16K: no process killed
+gtcd_16K: no process killed
+gcp: no process killed
+sniffTcp_16K: no process killed
+gtcd_16K: no process killed
+gcp: no process killed
+sniffTcp_16K: no process killed
+
+      map1  failed
+      map2  failed
+      map3  failed
+      map4  failed
+      map5  failed
+      map7  failed
+     map11  failed
+     map12  failed
+     map13  failed
+     map14  failed
+     map15  failed
+     map16  failed
+     map18  failed
+     map19  failed
+     map22  failed
+     map25  failed
+     map27  failed
+     map28  failed
+     map29  failed
+     map30  failed
+     map31  failed
+     map34  failed
+     map37  failed
+     map38  failed
+0.54user 0.15system 0:01.09elapsed 64%CPU (0avgtext+0avgdata 0maxresident)k
+0inputs+0outputs (0major+22136minor)pagefaults 0swaps
+time ./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo killall tcpdump'"
+Exec:  ssh map1 'sudo killall tcpdump'
+Exec:  ssh map2 'sudo killall tcpdump'
+Exec:  ssh map3 'sudo killall tcpdump'
+Exec:  ssh map4 'sudo killall tcpdump'
+Exec:  ssh map5 'sudo killall tcpdump'
+Exec:  ssh map7 'sudo killall tcpdump'
+Exec:  ssh map11 'sudo killall tcpdump'
+Exec:  ssh map12 'sudo killall tcpdump'
+Exec:  ssh map13 'sudo killall tcpdump'
+Exec:  ssh map14 'sudo killall tcpdump'
+Exec:  ssh map16 'sudo killall tcpdump'
+Exec:  ssh map18 'sudo killall tcpdump'
+Exec:  ssh map19 'sudo killall tcpdump'
+tcpdump: no process killed
+Exec:  ssh map22 'sudo killall tcpdump'
+tcpdump: no process killed
+tcpdump: no process killed
+tcpdump: no process killed
+Exec:  ssh map25 'sudo killall tcpdump'
+Exec:  ssh map27 'sudo killall tcpdump'
+Exec:  ssh map28 'sudo killall tcpdump'
+Exec:  ssh map29 'sudo killall tcpdump'
+Exec:  ssh map15 'sudo killall tcpdump'
+tcpdump: no process killed
+tcpdump: no process killed
+Exec:  ssh map30 'sudo killall tcpdump'
+Exec:  ssh map31 'sudo killall tcpdump'
+Exec:  ssh map34 'sudo killall tcpdump'
+Exec:  ssh map37 'sudo killall tcpdump'
+tcpdump: no process killed
+tcpdump: no process killed
+Exec:  ssh map38 'sudo killall tcpdump'
+tcpdump: no process killed
+tcpdump: no process killed
+tcpdump: no process killed
+tcpdump: no process killed
+tcpdump: no process killed
+tcpdump: no process killed
+tcpdump: no process killed
+tcpdump: no process killed
+tcpdump: no process killed
+tcpdump: no process killed
+tcpdump: no process killed
+tcpdump: no process killed
+tcpdump: no process killed
+tcpdump: no process killed
+tcpdump: no process killed
+tcpdump: no process killed
+
+      map1  failed
+      map2  failed
+      map3  failed
+      map4  failed
+      map5  failed
+      map7  failed
+     map11  failed
+     map12  failed
+     map13  failed
+     map14  failed
+     map15  failed
+     map16  failed
+     map18  failed
+     map19  failed
+     map22  failed
+     map25  failed
+     map27  failed
+     map28  failed
+     map29  failed
+     map30  failed
+     map31  failed
+     map34  failed
+     map37  failed
+     map38  failed
+0.53user 0.15system 0:01.12elapsed 62%CPU (0avgtext+0avgdata 0maxresident)k
+0inputs+0outputs (0major+22148minor)pagefaults 0swaps
+--------------------------------------------
+ export WORK_PATH=/tmp/ ; time ./do-perhost.pl -t 600 -c 25 -f TOPOS/MAP.TXT "./copy-stuff.pl @HOST@ all.tar.gz" 
+Exec:  ./copy-stuff.pl map1 all.tar.gz
+Exec:  ./copy-stuff.pl map2 all.tar.gz
+Exec:  ./copy-stuff.pl map3 all.tar.gz
+Exec:  ./copy-stuff.pl map4 all.tar.gz
+Exec:  ./copy-stuff.pl map5 all.tar.gz
+Exec:  ./copy-stuff.pl map7 all.tar.gz
+Exec:  ./copy-stuff.pl map11 all.tar.gz
+Exec:  ./copy-stuff.pl map12 all.tar.gz
+Exec:  ./copy-stuff.pl map13 all.tar.gz
+Exec:  ./copy-stuff.pl map14 all.tar.gz
+Exec:  ./copy-stuff.pl map15 all.tar.gz
+Exec:  ./copy-stuff.pl map16 all.tar.gz
+Exec:  ./copy-stuff.pl map18 all.tar.gz
+Exec:  ./copy-stuff.pl map22 all.tar.gz
+Exec:  ./copy-stuff.pl map25 all.tar.gz
+Exec:  ./copy-stuff.pl map27 all.tar.gz
+Exec:  ./copy-stuff.pl map28 all.tar.gz
+Exec:  ./copy-stuff.pl map29 all.tar.gz
+Exec:  ./copy-stuff.pl map30 all.tar.gz
+Exec:  ./copy-stuff.pl map31 all.tar.gz
+Exec:  ./copy-stuff.pl map34 all.tar.gz
+Exec:  ./copy-stuff.pl map37 all.tar.gz
+Exec:  ./copy-stuff.pl map38 all.tar.gz
+Exec:  ./copy-stuff.pl map19 all.tar.gz
+
+1.55user 0.27system 0:02.49elapsed 73%CPU (0avgtext+0avgdata 0maxresident)k
+0inputs+0outputs (0major+39466minor)pagefaults 0swaps
+time ./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'rm -rf /tmp//dot && cd /tmp/ && tar -zxf /tmp//all.tar.gz >& /dev/null'"
+Exec:  ssh map1 'rm -rf /tmp//dot && cd /tmp/ && tar -zxf /tmp//all.tar.gz >& /dev/null'
+Exec:  ssh map2 'rm -rf /tmp//dot && cd /tmp/ && tar -zxf /tmp//all.tar.gz >& /dev/null'
+Exec:  ssh map4 'rm -rf /tmp//dot && cd /tmp/ && tar -zxf /tmp//all.tar.gz >& /dev/null'
+Exec:  ssh map5 'rm -rf /tmp//dot && cd /tmp/ && tar -zxf /tmp//all.tar.gz >& /dev/null'
+Exec:  ssh map7 'rm -rf /tmp//dot && cd /tmp/ && tar -zxf /tmp//all.tar.gz >& /dev/null'
+Exec:  ssh map11 'rm -rf /tmp//dot && cd /tmp/ && tar -zxf /tmp//all.tar.gz >& /dev/null'
+Exec:  ssh map12 'rm -rf /tmp//dot && cd /tmp/ && tar -zxf /tmp//all.tar.gz >& /dev/null'
+Exec:  ssh map13 'rm -rf /tmp//dot && cd /tmp/ && tar -zxf /tmp//all.tar.gz >& /dev/null'
+Exec:  ssh map3 'rm -rf /tmp//dot && cd /tmp/ && tar -zxf /tmp//all.tar.gz >& /dev/null'
+Exec:  ssh map15 'rm -rf /tmp//dot && cd /tmp/ && tar -zxf /tmp//all.tar.gz >& /dev/null'
+Exec:  ssh map16 'rm -rf /tmp//dot && cd /tmp/ && tar -zxf /tmp//all.tar.gz >& /dev/null'
+Exec:  ssh map18 'rm -rf /tmp//dot && cd /tmp/ && tar -zxf /tmp//all.tar.gz >& /dev/null'
+Exec:  ssh map19 'rm -rf /tmp//dot && cd /tmp/ && tar -zxf /tmp//all.tar.gz >& /dev/null'
+Exec:  ssh map22 'rm -rf /tmp//dot && cd /tmp/ && tar -zxf /tmp//all.tar.gz >& /dev/null'
+Exec:  ssh map25 'rm -rf /tmp//dot && cd /tmp/ && tar -zxf /tmp//all.tar.gz >& /dev/null'
+Exec:  ssh map14 'rm -rf /tmp//dot && cd /tmp/ && tar -zxf /tmp//all.tar.gz >& /dev/null'
+Exec:  ssh map28 'rm -rf /tmp//dot && cd /tmp/ && tar -zxf /tmp//all.tar.gz >& /dev/null'
+Exec:  ssh map29 'rm -rf /tmp//dot && cd /tmp/ && tar -zxf /tmp//all.tar.gz >& /dev/null'
+Exec:  ssh map30 'rm -rf /tmp//dot && cd /tmp/ && tar -zxf /tmp//all.tar.gz >& /dev/null'
+Exec:  ssh map31 'rm -rf /tmp//dot && cd /tmp/ && tar -zxf /tmp//all.tar.gz >& /dev/null'
+Exec:  ssh map34 'rm -rf /tmp//dot && cd /tmp/ && tar -zxf /tmp//all.tar.gz >& /dev/null'
+Exec:  ssh map37 'rm -rf /tmp//dot && cd /tmp/ && tar -zxf /tmp//all.tar.gz >& /dev/null'
+Exec:  ssh map27 'rm -rf /tmp//dot && cd /tmp/ && tar -zxf /tmp//all.tar.gz >& /dev/null'
+Exec:  ssh map38 'rm -rf /tmp//dot && cd /tmp/ && tar -zxf /tmp//all.tar.gz >& /dev/null'
+
+0.54user 0.14system 0:10.48elapsed 6%CPU (0avgtext+0avgdata 0maxresident)k
+0inputs+0outputs (0major+22094minor)pagefaults 0swaps
+--------------------------------------------
+PERRUN chunk = 16K, comb = dot-ohear, run = 0
+Sun Mar  9 12:05:51 EST 2008
+-----> Killing processes in all nodes
+time ./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo killall -9 gtcd_16K gcp sniffTcp_16K && rm -f /tmp/dot/out '"
+Exec:  ssh map1 'sudo killall -9 gtcd_16K gcp sniffTcp_16K && rm -f /tmp/dot/out '
+Exec:  ssh map2 'sudo killall -9 gtcd_16K gcp sniffTcp_16K && rm -f /tmp/dot/out '
+Exec:  ssh map3 'sudo killall -9 gtcd_16K gcp sniffTcp_16K && rm -f /tmp/dot/out '
+Exec:  ssh map4 'sudo killall -9 gtcd_16K gcp sniffTcp_16K && rm -f /tmp/dot/out '
+Exec:  ssh map5 'sudo killall -9 gtcd_16K gcp sniffTcp_16K && rm -f /tmp/dot/out '
+Exec:  ssh map7 'sudo killall -9 gtcd_16K gcp sniffTcp_16K && rm -f /tmp/dot/out '
+Exec:  ssh map12 'sudo killall -9 gtcd_16K gcp sniffTcp_16K && rm -f /tmp/dot/out '
+Exec:  ssh map13 'sudo killall -9 gtcd_16K gcp sniffTcp_16K && rm -f /tmp/dot/out '
+Exec:  ssh map14 'sudo killall -9 gtcd_16K gcp sniffTcp_16K && rm -f /tmp/dot/out '
+Exec:  ssh map15 'sudo killall -9 gtcd_16K gcp sniffTcp_16K && rm -f /tmp/dot/out '
+Exec:  ssh map16 'sudo killall -9 gtcd_16K gcp sniffTcp_16K && rm -f /tmp/dot/out '
+Exec:  ssh map18 'sudo killall -9 gtcd_16K gcp sniffTcp_16K && rm -f /tmp/dot/out '
+Exec:  ssh map11 'sudo killall -9 gtcd_16K gcp sniffTcp_16K && rm -f /tmp/dot/out '
+gtcd_16K: no process killed
+gcp: no process killed
+sniffTcp_16K: no process killed
+Exec:  ssh map22 'sudo killall -9 gtcd_16K gcp sniffTcp_16K && rm -f /tmp/dot/out '
+gtcd_16K: no process killed
+gcp: no process killed
+sniffTcp_16K: no process killed
+Exec:  ssh map25 'sudo killall -9 gtcd_16K gcp sniffTcp_16K && rm -f /tmp/dot/out '
+gtcd_16K: no process killed
+gcp: no process killed
+sniffTcp_16K: no process killed
+Exec:  ssh map27 'sudo killall -9 gtcd_16K gcp sniffTcp_16K && rm -f /tmp/dot/out '
+gtcd_16K: no process killed
+gcp: no process killed
+sniffTcp_16K: no process killed
+gtcd_16K: no process killed
+gcp: no process killed
+sniffTcp_16K: no process killed
+Exec:  ssh map28 'sudo killall -9 gtcd_16K gcp sniffTcp_16K && rm -f /tmp/dot/out '
+Exec:  ssh map29 'sudo killall -9 gtcd_16K gcp sniffTcp_16K && rm -f /tmp/dot/out '
+Exec:  ssh map30 'sudo killall -9 gtcd_16K gcp sniffTcp_16K && rm -f /tmp/dot/out '
+Exec:  ssh map19 'sudo killall -9 gtcd_16K gcp sniffTcp_16K && rm -f /tmp/dot/out '
+gtcd_16K: no process killed
+gcp: no process killed
+sniffTcp_16K: no process killed
+Exec:  ssh map31 'sudo killall -9 gtcd_16K gcp sniffTcp_16K && rm -f /tmp/dot/out '
+Exec:  ssh map34 'sudo killall -9 gtcd_16K gcp sniffTcp_16K && rm -f /tmp/dot/out '
+Exec:  ssh map37 'sudo killall -9 gtcd_16K gcp sniffTcp_16K && rm -f /tmp/dot/out '
+gtcd_16K: no process killed
+gcp: no process killed
+sniffTcp_16K: no process killed
+gtcd_16K: no process killed
+gcp: no process killed
+sniffTcp_16K: no process killed
+Exec:  ssh map38 'sudo killall -9 gtcd_16K gcp sniffTcp_16K && rm -f /tmp/dot/out '
+gtcd_16K: no process killed
+gcp: no process killed
+sniffTcp_16K: no process killed
+gtcd_16K: no process killed
+gcp: no process killed
+sniffTcp_16K: no process killed
+gtcd_16K: no process killed
+gcp: no process killed
+sniffTcp_16K: no process killed
+gtcd_16K: no process killed
+gcp: no process killed
+sniffTcp_16K: no process killed
+gtcd_16K: no process killed
+gcp: no process killed
+sniffTcp_16K: no process killed
+gtcd_16K: no process killed
+gcp: no process killed
+sniffTcp_16K: no process killed
+gtcd_16K: no process killed
+gtcd_16K: no process killed
+gcp: no process killed
+sniffTcp_16K: no process killed
+gcp: no process killed
+sniffTcp_16K: no process killed
+gtcd_16K: no process killed
+gcp: no process killed
+sniffTcp_16K: no process killed
+gtcd_16K: no process killed
+gcp: no process killed
+sniffTcp_16K: no process killed
+gtcd_16K: no process killed
+gcp: no process killed
+sniffTcp_16K: no process killed
+gtcd_16K: no process killed
+gcp: no process killed
+sniffTcp_16K: no process killed
+gtcd_16K: no process killed
+gcp: no process killed
+sniffTcp_16K: no process killed
+gtcd_16K: no process killed
+gcp: no process killed
+sniffTcp_16K: no process killed
+gtcd_16K: no process killed
+gcp: no process killed
+sniffTcp_16K: no process killed
+gtcd_16K: no process killed
+gcp: no process killed
+sniffTcp_16K: no process killed
+
+      map1  failed
+      map2  failed
+      map3  failed
+      map4  failed
+      map5  failed
+      map7  failed
+     map11  failed
+     map12  failed
+     map13  failed
+     map14  failed
+     map15  failed
+     map16  failed
+     map18  failed
+     map19  failed
+     map22  failed
+     map25  failed
+     map27  failed
+     map28  failed
+     map29  failed
+     map30  failed
+     map31  failed
+     map34  failed
+     map37  failed
+     map38  failed
+0.54user 0.14system 0:01.66elapsed 41%CPU (0avgtext+0avgdata 0maxresident)k
+0inputs+0outputs (0major+22142minor)pagefaults 0swaps
+time ./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo killall tcpdump'"
+Exec:  ssh map1 'sudo killall tcpdump'
+Exec:  ssh map2 'sudo killall tcpdump'
+Exec:  ssh map3 'sudo killall tcpdump'
+Exec:  ssh map4 'sudo killall tcpdump'
+Exec:  ssh map5 'sudo killall tcpdump'
+Exec:  ssh map7 'sudo killall tcpdump'
+Exec:  ssh map11 'sudo killall tcpdump'
+Exec:  ssh map12 'sudo killall tcpdump'
+Exec:  ssh map13 'sudo killall tcpdump'
+Exec:  ssh map14 'sudo killall tcpdump'
+Exec:  ssh map15 'sudo killall tcpdump'
+Exec:  ssh map16 'sudo killall tcpdump'
+Exec:  ssh map18 'sudo killall tcpdump'
+tcpdump: no process killed
+Exec:  ssh map22 'sudo killall tcpdump'
+Exec:  ssh map25 'sudo killall tcpdump'
+tcpdump: no process killed
+tcpdump: no process killed
+Exec:  ssh map27 'sudo killall tcpdump'
+tcpdump: no process killed
+Exec:  ssh map28 'sudo killall tcpdump'
+Exec:  ssh map29 'sudo killall tcpdump'
+Exec:  ssh map30 'sudo killall tcpdump'
+tcpdump: no process killed
+tcpdump: no process killed
+Exec:  ssh map19 'sudo killall tcpdump'
+tcpdump: no process killed
+tcpdump: no process killed
+tcpdump: no process killed
+Exec:  ssh map34 'sudo killall tcpdump'
+tcpdump: no process killed
+Exec:  ssh map37 'sudo killall tcpdump'
+tcpdump: no process killed
+Exec:  ssh map38 'sudo killall tcpdump'
+tcpdump: no process killed
+tcpdump: no process killed
+tcpdump: no process killed
+tcpdump: no process killed
+Exec:  ssh map31 'sudo killall tcpdump'
+tcpdump: no process killed
+tcpdump: no process killed
+tcpdump: no process killed
+tcpdump: no process killed
+tcpdump: no process killed
+tcpdump: no process killed
+tcpdump: no process killed
+tcpdump: no process killed
+tcpdump: no process killed
+
+      map1  failed
+      map2  failed
+      map3  failed
+      map4  failed
+      map5  failed
+      map7  failed
+     map11  failed
+     map12  failed
+     map13  failed
+     map14  failed
+     map15  failed
+     map16  failed
+     map18  failed
+     map19  failed
+     map22  failed
+     map25  failed
+     map27  failed
+     map28  failed
+     map29  failed
+     map30  failed
+     map31  failed
+     map34  failed
+     map37  failed
+     map38  failed
+0.54user 0.14system 0:01.20elapsed 57%CPU (0avgtext+0avgdata 0maxresident)k
+0inputs+0outputs (0major+22154minor)pagefaults 0swaps
+--------------------------------------------
+-----> Starting GTCDs and Sniffers on all nodes
+time ./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ '/tmp//dot/build/gtcd/gtcd_16K -n -m 1 -f /tmp//dot/conf/dot.conf >& /tmp//dot/dot.log &'"
+Exec:  ssh map1 '/tmp//dot/build/gtcd/gtcd_16K -n -m 1 -f /tmp//dot/conf/dot.conf >& /tmp//dot/dot.log &'
+Exec:  ssh map2 '/tmp//dot/build/gtcd/gtcd_16K -n -m 1 -f /tmp//dot/conf/dot.conf >& /tmp//dot/dot.log &'
+Exec:  ssh map3 '/tmp//dot/build/gtcd/gtcd_16K -n -m 1 -f /tmp//dot/conf/dot.conf >& /tmp//dot/dot.log &'
+Exec:  ssh map4 '/tmp//dot/build/gtcd/gtcd_16K -n -m 1 -f /tmp//dot/conf/dot.conf >& /tmp//dot/dot.log &'
+Exec:  ssh map5 '/tmp//dot/build/gtcd/gtcd_16K -n -m 1 -f /tmp//dot/conf/dot.conf >& /tmp//dot/dot.log &'
+Exec:  ssh map7 '/tmp//dot/build/gtcd/gtcd_16K -n -m 1 -f /tmp//dot/conf/dot.conf >& /tmp//dot/dot.log &'
+Exec:  ssh map11 '/tmp//dot/build/gtcd/gtcd_16K -n -m 1 -f /tmp//dot/conf/dot.conf >& /tmp//dot/dot.log &'
+Exec:  ssh map12 '/tmp//dot/build/gtcd/gtcd_16K -n -m 1 -f /tmp//dot/conf/dot.conf >& /tmp//dot/dot.log &'
+Exec:  ssh map13 '/tmp//dot/build/gtcd/gtcd_16K -n -m 1 -f /tmp//dot/conf/dot.conf >& /tmp//dot/dot.log &'
+Exec:  ssh map14 '/tmp//dot/build/gtcd/gtcd_16K -n -m 1 -f /tmp//dot/conf/dot.conf >& /tmp//dot/dot.log &'
+Exec:  ssh map15 '/tmp//dot/build/gtcd/gtcd_16K -n -m 1 -f /tmp//dot/conf/dot.conf >& /tmp//dot/dot.log &'
+Exec:  ssh map16 '/tmp//dot/build/gtcd/gtcd_16K -n -m 1 -f /tmp//dot/conf/dot.conf >& /tmp//dot/dot.log &'
+Exec:  ssh map18 '/tmp//dot/build/gtcd/gtcd_16K -n -m 1 -f /tmp//dot/conf/dot.conf >& /tmp//dot/dot.log &'
+Exec:  ssh map19 '/tmp//dot/build/gtcd/gtcd_16K -n -m 1 -f /tmp//dot/conf/dot.conf >& /tmp//dot/dot.log &'
+Exec:  ssh map22 '/tmp//dot/build/gtcd/gtcd_16K -n -m 1 -f /tmp//dot/conf/dot.conf >& /tmp//dot/dot.log &'
+Exec:  ssh map25 '/tmp//dot/build/gtcd/gtcd_16K -n -m 1 -f /tmp//dot/conf/dot.conf >& /tmp//dot/dot.log &'
+Exec:  ssh map27 '/tmp//dot/build/gtcd/gtcd_16K -n -m 1 -f /tmp//dot/conf/dot.conf >& /tmp//dot/dot.log &'
+Exec:  ssh map28 '/tmp//dot/build/gtcd/gtcd_16K -n -m 1 -f /tmp//dot/conf/dot.conf >& /tmp//dot/dot.log &'
+Exec:  ssh map29 '/tmp//dot/build/gtcd/gtcd_16K -n -m 1 -f /tmp//dot/conf/dot.conf >& /tmp//dot/dot.log &'
+Exec:  ssh map30 '/tmp//dot/build/gtcd/gtcd_16K -n -m 1 -f /tmp//dot/conf/dot.conf >& /tmp//dot/dot.log &'
+Exec:  ssh map31 '/tmp//dot/build/gtcd/gtcd_16K -n -m 1 -f /tmp//dot/conf/dot.conf >& /tmp//dot/dot.log &'
+Exec:  ssh map34 '/tmp//dot/build/gtcd/gtcd_16K -n -m 1 -f /tmp//dot/conf/dot.conf >& /tmp//dot/dot.log &'
+Exec:  ssh map37 '/tmp//dot/build/gtcd/gtcd_16K -n -m 1 -f /tmp//dot/conf/dot.conf >& /tmp//dot/dot.log &'
+Exec:  ssh map38 '/tmp//dot/build/gtcd/gtcd_16K -n -m 1 -f /tmp//dot/conf/dot.conf >& /tmp//dot/dot.log &'
+[1] 6902
+
+0.54user 0.14system 0:01.25elapsed 55%CPU (0avgtext+0avgdata 0maxresident)k
+0inputs+0outputs (0major+22122minor)pagefaults 0swaps
+ssh map1 'sudo tcpdump -i ath0 -w /tmp//dot/tcpdump.log -s 1600 'tcp and not port 22 and not dst host 1.0.0.1' >& /dev/null &'
+ssh map2 'sudo tcpdump -i ath0 -w /tmp//dot/tcpdump.log -s 1600 'tcp and not port 22 and not dst host 1.0.0.2' >& /dev/null &'
+ssh map3 'sudo tcpdump -i ath0 -w /tmp//dot/tcpdump.log -s 1600 'tcp and not port 22 and not dst host 1.0.0.3' >& /dev/null &'
+ssh map4 'sudo tcpdump -i ath0 -w /tmp//dot/tcpdump.log -s 1600 'tcp and not port 22 and not dst host 1.0.0.4' >& /dev/null &'
+ssh map5 'sudo tcpdump -i ath0 -w /tmp//dot/tcpdump.log -s 1600 'tcp and not port 22 and not dst host 1.0.0.5' >& /dev/null &'
+ssh map7 'sudo tcpdump -i ath0 -w /tmp//dot/tcpdump.log -s 1600 'tcp and not port 22 and not dst host 1.0.0.7' >& /dev/null &'
+ssh map11 'sudo tcpdump -i ath0 -w /tmp//dot/tcpdump.log -s 1600 'tcp and not port 22 and not dst host 1.0.0.11' >& /dev/null &'
+ssh map12 'sudo tcpdump -i ath0 -w /tmp//dot/tcpdump.log -s 1600 'tcp and not port 22 and not dst host 1.0.0.12' >& /dev/null &'
+ssh map13 'sudo tcpdump -i ath0 -w /tmp//dot/tcpdump.log -s 1600 'tcp and not port 22 and not dst host 1.0.0.13' >& /dev/null &'
+ssh map14 'sudo tcpdump -i ath0 -w /tmp//dot/tcpdump.log -s 1600 'tcp and not port 22 and not dst host 1.0.0.14' >& /dev/null &'
+ssh map15 'sudo tcpdump -i ath0 -w /tmp//dot/tcpdump.log -s 1600 'tcp and not port 22 and not dst host 1.0.0.15' >& /dev/null &'
+ssh map16 'sudo tcpdump -i ath0 -w /tmp//dot/tcpdump.log -s 1600 'tcp and not port 22 and not dst host 1.0.0.16' >& /dev/null &'
+ssh map18 'sudo tcpdump -i ath0 -w /tmp//dot/tcpdump.log -s 1600 'tcp and not port 22 and not dst host 1.0.0.18' >& /dev/null &'
+ssh map19 'sudo tcpdump -i ath0 -w /tmp//dot/tcpdump.log -s 1600 'tcp and not port 22 and not dst host 1.0.0.19' >& /dev/null &'
+ssh map22 'sudo tcpdump -i ath0 -w /tmp//dot/tcpdump.log -s 1600 'tcp and not port 22 and not dst host 1.0.0.22' >& /dev/null &'
+[1] 6990
+ssh map25 'sudo tcpdump -i ath0 -w /tmp//dot/tcpdump.log -s 1600 'tcp and not port 22 and not dst host 1.0.0.25' >& /dev/null &'
+ssh map27 'sudo tcpdump -i ath0 -w /tmp//dot/tcpdump.log -s 1600 'tcp and not port 22 and not dst host 1.0.0.27' >& /dev/null &'
+ssh map28 'sudo tcpdump -i ath0 -w /tmp//dot/tcpdump.log -s 1600 'tcp and not port 22 and not dst host 1.0.0.28' >& /dev/null &'
+ssh map29 'sudo tcpdump -i ath0 -w /tmp//dot/tcpdump.log -s 1600 'tcp and not port 22 and not dst host 1.0.0.29' >& /dev/null &'
+ssh map30 'sudo tcpdump -i ath0 -w /tmp//dot/tcpdump.log -s 1600 'tcp and not port 22 and not dst host 1.0.0.30' >& /dev/null &'
+ssh map31 'sudo tcpdump -i ath0 -w /tmp//dot/tcpdump.log -s 1600 'tcp and not port 22 and not dst host 1.0.0.31' >& /dev/null &'
+ssh map34 'sudo tcpdump -i ath0 -w /tmp//dot/tcpdump.log -s 1600 'tcp and not port 22 and not dst host 1.0.0.34' >& /dev/null &'
+ssh map37 'sudo tcpdump -i ath0 -w /tmp//dot/tcpdump.log -s 1600 'tcp and not port 22 and not dst host 1.0.0.37' >& /dev/null &'
+ssh map38 'sudo tcpdump -i ath0 -w /tmp//dot/tcpdump.log -s 1600 'tcp and not port 22 and not dst host 1.0.0.38' >& /dev/null &'
+ssh map1 'sudo /tmp//dot/build/sniffTcp_16K 1000 ath0 /tmp/gtcd_sniff.sock 1 1.0.0.1 0 >& /tmp//dot/sniffer.log &'
+ssh map2 'sudo /tmp//dot/build/sniffTcp_16K 1000 ath0 /tmp/gtcd_sniff.sock 1 1.0.0.2 0 >& /tmp//dot/sniffer.log &'
+ssh map3 'sudo /tmp//dot/build/sniffTcp_16K 1000 ath0 /tmp/gtcd_sniff.sock 1 1.0.0.3 0 >& /tmp//dot/sniffer.log &'
+ssh map4 'sudo /tmp//dot/build/sniffTcp_16K 1000 ath0 /tmp/gtcd_sniff.sock 1 1.0.0.4 0 >& /tmp//dot/sniffer.log &'
+ssh map5 'sudo /tmp//dot/build/sniffTcp_16K 1000 ath0 /tmp/gtcd_sniff.sock 1 1.0.0.5 0 >& /tmp//dot/sniffer.log &'
+ssh map7 'sudo /tmp//dot/build/sniffTcp_16K 1000 ath0 /tmp/gtcd_sniff.sock 1 1.0.0.7 0 >& /tmp//dot/sniffer.log &'
+ssh map11 'sudo /tmp//dot/build/sniffTcp_16K 1000 ath0 /tmp/gtcd_sniff.sock 1 1.0.0.11 0 >& /tmp//dot/sniffer.log &'
+ssh map12 'sudo /tmp//dot/build/sniffTcp_16K 1000 ath0 /tmp/gtcd_sniff.sock 1 1.0.0.12 0 >& /tmp//dot/sniffer.log &'
+ssh map13 'sudo /tmp//dot/build/sniffTcp_16K 1000 ath0 /tmp/gtcd_sniff.sock 1 1.0.0.13 0 >& /tmp//dot/sniffer.log &'
+ssh map14 'sudo /tmp//dot/build/sniffTcp_16K 1000 ath0 /tmp/gtcd_sniff.sock 1 1.0.0.14 0 >& /tmp//dot/sniffer.log &'
+ssh map15 'sudo /tmp//dot/build/sniffTcp_16K 1000 ath0 /tmp/gtcd_sniff.sock 1 1.0.0.15 0 >& /tmp//dot/sniffer.log &'
+ssh map16 'sudo /tmp//dot/build/sniffTcp_16K 1000 ath0 /tmp/gtcd_sniff.sock 1 1.0.0.16 0 >& /tmp//dot/sniffer.log &'
+ssh map18 'sudo /tmp//dot/build/sniffTcp_16K 1000 ath0 /tmp/gtcd_sniff.sock 1 1.0.0.18 0 >& /tmp//dot/sniffer.log &'
+ssh map19 'sudo /tmp//dot/build/sniffTcp_16K 1000 ath0 /tmp/gtcd_sniff.sock 1 1.0.0.19 0 >& /tmp//dot/sniffer.log &'
+ssh map22 'sudo /tmp//dot/build/sniffTcp_16K 1000 ath0 /tmp/gtcd_sniff.sock 1 1.0.0.22 0 >& /tmp//dot/sniffer.log &'
+[1] 7084
+ssh map25 'sudo /tmp//dot/build/sniffTcp_16K 1000 ath0 /tmp/gtcd_sniff.sock 1 1.0.0.25 0 >& /tmp//dot/sniffer.log &'
+ssh map27 'sudo /tmp//dot/build/sniffTcp_16K 1000 ath0 /tmp/gtcd_sniff.sock 1 1.0.0.27 0 >& /tmp//dot/sniffer.log &'
+ssh map28 'sudo /tmp//dot/build/sniffTcp_16K 1000 ath0 /tmp/gtcd_sniff.sock 1 1.0.0.28 0 >& /tmp//dot/sniffer.log &'
+ssh map29 'sudo /tmp//dot/build/sniffTcp_16K 1000 ath0 /tmp/gtcd_sniff.sock 1 1.0.0.29 0 >& /tmp//dot/sniffer.log &'
+ssh map30 'sudo /tmp//dot/build/sniffTcp_16K 1000 ath0 /tmp/gtcd_sniff.sock 1 1.0.0.30 0 >& /tmp//dot/sniffer.log &'
+ssh map31 'sudo /tmp//dot/build/sniffTcp_16K 1000 ath0 /tmp/gtcd_sniff.sock 1 1.0.0.31 0 >& /tmp//dot/sniffer.log &'
+ssh map34 'sudo /tmp//dot/build/sniffTcp_16K 1000 ath0 /tmp/gtcd_sniff.sock 1 1.0.0.34 0 >& /tmp//dot/sniffer.log &'
+ssh map37 'sudo /tmp//dot/build/sniffTcp_16K 1000 ath0 /tmp/gtcd_sniff.sock 1 1.0.0.37 0 >& /tmp//dot/sniffer.log &'
+ssh map38 'sudo /tmp//dot/build/sniffTcp_16K 1000 ath0 /tmp/gtcd_sniff.sock 1 1.0.0.38 0 >& /tmp//dot/sniffer.log &'
+--------------------------------------------
+-----> Starting sender GCP
+export WORK_PATH=/tmp//dot/ ; ./copy-stuff.pl map11 file-map11
+ssh map11 '/tmp//dot/build/gcp/gcp -f -P /tmp//dot/file-map11'
+gcp: amar:: client_put_only
+gcp: gcpputting /tmp//dot/file-map11
+gcp: Sending file /tmp//dot/file-map11
+gcp: Connected to GTC via a Unix domain socket.
+gcp: gcp_c is null, done
+PUT_OID:321e7ce10a9589193ae5745d3873351ce3aaebeb:/tmp//dot/file-map11
+gcp: Done sending all files
+--------------------------------------------
+-----> Starting receiver GCP
+ssh map25 '/tmp//dot/build/gcp/gcp -f dot://321e7ce10a9589193ae5745d3873351ce3aaebeb:1.0.0.11:12000:1 /tmp//dot/out >& /tmp//dot/gcp.log &'
+--------------------------------------------
+-----> Waiting for receiver GCP to die ...
+perl monitor.pl recvrs.crap gcp 0
+wc -l recvrs.crap
+Num plab nodes : 1
+./do-perhost.pl -t 120 -c 200 -f recvrs.crap './check.pl @HOST@ gcp' >& temp.crap
+grep 'BAD HOST NAME' temp.crap | wc -l
+Num nodes now: 0 and 0
+./do-perhost.pl -t 120 -c 200 -f recvrs.crap './check.pl @HOST@ gcp' >& temp.crap
+grep 'BAD HOST NAME' temp.crap | wc -l
+Num nodes now: 0 and 0
+./do-perhost.pl -t 120 -c 200 -f recvrs.crap './check.pl @HOST@ gcp' >& temp.crap
+grep 'BAD HOST NAME' temp.crap | wc -l
+Num nodes now: 1 and 1
+NOW: 1 THEN:1
+--------------------------------------------
+-----> Checking receivers
+ssh map25 'openssl sha1 /tmp//dot/out'
+Good 321e7ce10a9589193ae5745d3873351ce3aaebeb 321e7ce10a9589193ae5745d3873351ce3aaebeb
+--------------------------------------------
+-----> Killing processes in all nodes
+time ./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo killall -9 gtcd_16K gcp sniffTcp_16K && rm -f /tmp/dot/out '"
+Exec:  ssh map1 'sudo killall -9 gtcd_16K gcp sniffTcp_16K && rm -f /tmp/dot/out '
+Exec:  ssh map2 'sudo killall -9 gtcd_16K gcp sniffTcp_16K && rm -f /tmp/dot/out '
+Exec:  ssh map12 'sudo killall -9 gtcd_16K gcp sniffTcp_16K && rm -f /tmp/dot/out '
+Exec:  ssh map15 'sudo killall -9 gtcd_16K gcp sniffTcp_16K && rm -f /tmp/dot/out '
+gcp: no process killed
+Exec:  ssh map16 'sudo killall -9 gtcd_16K gcp sniffTcp_16K && rm -f /tmp/dot/out '
+Exec:  ssh map18 'sudo killall -9 gtcd_16K gcp sniffTcp_16K && rm -f /tmp/dot/out '
+Exec:  ssh map19 'sudo killall -9 gtcd_16K gcp sniffTcp_16K && rm -f /tmp/dot/out '
+Exec:  ssh map22 'sudo killall -9 gtcd_16K gcp sniffTcp_16K && rm -f /tmp/dot/out '
+Exec:  ssh map25 'sudo killall -9 gtcd_16K gcp sniffTcp_16K && rm -f /tmp/dot/out '
+gcp: no process killed
+Exec:  ssh map13 'sudo killall -9 gtcd_16K gcp sniffTcp_16K && rm -f /tmp/dot/out '
+gcp: no process killed
+Exec:  ssh map14 'sudo killall -9 gtcd_16K gcp sniffTcp_16K && rm -f /tmp/dot/out '
+gcp: no process killed
+gcp: no process killed
+Exec:  ssh map28 'sudo killall -9 gtcd_16K gcp sniffTcp_16K && rm -f /tmp/dot/out '
+Exec:  ssh map29 'sudo killall -9 gtcd_16K gcp sniffTcp_16K && rm -f /tmp/dot/out '
+gcp: no process killed
+Exec:  ssh map30 'sudo killall -9 gtcd_16K gcp sniffTcp_16K && rm -f /tmp/dot/out '
+Exec:  ssh map31 'sudo killall -9 gtcd_16K gcp sniffTcp_16K && rm -f /tmp/dot/out '
+Exec:  ssh map34 'sudo killall -9 gtcd_16K gcp sniffTcp_16K && rm -f /tmp/dot/out '
+Exec:  ssh map37 'sudo killall -9 gtcd_16K gcp sniffTcp_16K && rm -f /tmp/dot/out '
+gcp: no process killed
+gcp: no process killed
+gcp: no process killed
+gcp: no process killed
+gcp: no process killed
+Exec:  ssh map27 'sudo killall -9 gtcd_16K gcp sniffTcp_16K && rm -f /tmp/dot/out '
+gcp: no process killed
+gcp: no process killed
+gcp: no process killed
+gcp: no process killed
+gcp: no process killed
+Exec:  ssh map38 'sudo killall -9 gtcd_16K gcp sniffTcp_16K && rm -f /tmp/dot/out '
+gcp: no process killed
+gcp: no process killed
+gcp: no process killed
+gcp: no process killed
+gcp: no process killed
+gcp: no process killed
+gcp: no process killed
+gcp: no process killed
+
+      map1  failed
+      map2  failed
+      map3  failed
+      map4  failed
+      map5  failed
+      map7  failed
+     map11  failed
+     map12  failed
+     map13  failed
+     map14  failed
+     map15  failed
+     map16  failed
+     map18  failed
+     map19  failed
+     map22  failed
+     map25  failed
+     map27  failed
+     map28  failed
+     map29  failed
+     map30  failed
+     map31  failed
+     map34  failed
+     map37  failed
+     map38  failed
+0.54user 0.17system 0:01.28elapsed 55%CPU (0avgtext+0avgdata 0maxresident)k
+0inputs+0outputs (0major+22138minor)pagefaults 0swaps
+time ./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo killall tcpdump'"
+Exec:  ssh map1 'sudo killall tcpdump'
+Exec:  ssh map2 'sudo killall tcpdump'
+Exec:  ssh map3 'sudo killall tcpdump'
+Exec:  ssh map4 'sudo killall tcpdump'
+Exec:  ssh map5 'sudo killall tcpdump'
+Exec:  ssh map7 'sudo killall tcpdump'
+Exec:  ssh map11 'sudo killall tcpdump'
+Exec:  ssh map12 'sudo killall tcpdump'
+Exec:  ssh map13 'sudo killall tcpdump'
+Exec:  ssh map14 'sudo killall tcpdump'
+Exec:  ssh map15 'sudo killall tcpdump'
+Exec:  ssh map16 'sudo killall tcpdump'
+Exec:  ssh map18 'sudo killall tcpdump'
+Exec:  ssh map19 'sudo killall tcpdump'
+Exec:  ssh map22 'sudo killall tcpdump'
+Exec:  ssh map27 'sudo killall tcpdump'
+Exec:  ssh map28 'sudo killall tcpdump'
+Exec:  ssh map29 'sudo killall tcpdump'
+Exec:  ssh map30 'sudo killall tcpdump'
+Exec:  ssh map31 'sudo killall tcpdump'
+Exec:  ssh map34 'sudo killall tcpdump'
+Exec:  ssh map25 'sudo killall tcpdump'
+Exec:  ssh map38 'sudo killall tcpdump'
+Exec:  ssh map37 'sudo killall tcpdump'
+
+0.53user 0.16system 0:01.21elapsed 57%CPU (0avgtext+0avgdata 0maxresident)k
+0inputs+0outputs (0major+22128minor)pagefaults 0swaps
+--------------------------------------------
+-----> Fetching logs from all nodes
+rm -rf expt-map25-16K-dot-ohear-0 ; mkdir -p expt-map25-16K-dot-ohear-0/dot expt-map25-16K-dot-ohear-0/sniffer expt-map25-16K-dot-ohear-0/gcp
+-----> fetching gtcd logs from all nodes 
+time ./do-perhost.pl -t 600 -c 25 -f TOPOS/MAP.TXT "ssh  @HOST@ 'gzip -f /tmp//dot/*.log '" 
+Exec:  ssh  map1 'gzip -f /tmp//dot/*.log '
+Exec:  ssh  map2 'gzip -f /tmp//dot/*.log '
+Exec:  ssh  map3 'gzip -f /tmp//dot/*.log '
+Exec:  ssh  map4 'gzip -f /tmp//dot/*.log '
+Exec:  ssh  map5 'gzip -f /tmp//dot/*.log '
+Exec:  ssh  map7 'gzip -f /tmp//dot/*.log '
+Exec:  ssh  map11 'gzip -f /tmp//dot/*.log '
+Exec:  ssh  map12 'gzip -f /tmp//dot/*.log '
+Exec:  ssh  map13 'gzip -f /tmp//dot/*.log '
+Exec:  ssh  map14 'gzip -f /tmp//dot/*.log '
+Exec:  ssh  map15 'gzip -f /tmp//dot/*.log '
+Exec:  ssh  map16 'gzip -f /tmp//dot/*.log '
+Exec:  ssh  map18 'gzip -f /tmp//dot/*.log '
+Exec:  ssh  map22 'gzip -f /tmp//dot/*.log '
+Exec:  ssh  map25 'gzip -f /tmp//dot/*.log '
+Exec:  ssh  map27 'gzip -f /tmp//dot/*.log '
+Exec:  ssh  map28 'gzip -f /tmp//dot/*.log '
+Exec:  ssh  map29 'gzip -f /tmp//dot/*.log '
+Exec:  ssh  map30 'gzip -f /tmp//dot/*.log '
+Exec:  ssh  map31 'gzip -f /tmp//dot/*.log '
+Exec:  ssh  map34 'gzip -f /tmp//dot/*.log '
+Exec:  ssh  map37 'gzip -f /tmp//dot/*.log '
+Exec:  ssh  map38 'gzip -f /tmp//dot/*.log '
+Exec:  ssh  map19 'gzip -f /tmp//dot/*.log '
+
+0.55user 0.13system 0:01.76elapsed 39%CPU (0avgtext+0avgdata 0maxresident)k
+0inputs+0outputs (0major+22122minor)pagefaults 0swaps
+export WORK_PATH=/tmp//dot ; time ./do-perhost.pl -t 600 -c 25 -f TOPOS/MAP.TXT './get-stuff.pl @HOST@ dot.log.gz expt-map25-16K-dot-ohear-0/dot/' 
+Exec:  ./get-stuff.pl map1 dot.log.gz expt-map25-16K-dot-ohear-0/dot/
+Exec:  ./get-stuff.pl map2 dot.log.gz expt-map25-16K-dot-ohear-0/dot/
+Exec:  ./get-stuff.pl map3 dot.log.gz expt-map25-16K-dot-ohear-0/dot/
+Exec:  ./get-stuff.pl map4 dot.log.gz expt-map25-16K-dot-ohear-0/dot/
+Exec:  ./get-stuff.pl map5 dot.log.gz expt-map25-16K-dot-ohear-0/dot/
+Exec:  ./get-stuff.pl map7 dot.log.gz expt-map25-16K-dot-ohear-0/dot/
+Exec:  ./get-stuff.pl map11 dot.log.gz expt-map25-16K-dot-ohear-0/dot/
+Exec:  ./get-stuff.pl map12 dot.log.gz expt-map25-16K-dot-ohear-0/dot/
+Exec:  ./get-stuff.pl map13 dot.log.gz expt-map25-16K-dot-ohear-0/dot/
+Exec:  ./get-stuff.pl map14 dot.log.gz expt-map25-16K-dot-ohear-0/dot/
+Exec:  ./get-stuff.pl map15 dot.log.gz expt-map25-16K-dot-ohear-0/dot/
+Exec:  ./get-stuff.pl map16 dot.log.gz expt-map25-16K-dot-ohear-0/dot/
+Exec:  ./get-stuff.pl map18 dot.log.gz expt-map25-16K-dot-ohear-0/dot/
+Exec:  ./get-stuff.pl map22 dot.log.gz expt-map25-16K-dot-ohear-0/dot/
+Exec:  ./get-stuff.pl map25 dot.log.gz expt-map25-16K-dot-ohear-0/dot/
+Exec:  ./get-stuff.pl map27 dot.log.gz expt-map25-16K-dot-ohear-0/dot/
+Exec:  ./get-stuff.pl map28 dot.log.gz expt-map25-16K-dot-ohear-0/dot/
+Exec:  ./get-stuff.pl map29 dot.log.gz expt-map25-16K-dot-ohear-0/dot/
+Exec:  ./get-stuff.pl map30 dot.log.gz expt-map25-16K-dot-ohear-0/dot/
+Exec:  ./get-stuff.pl map34 dot.log.gz expt-map25-16K-dot-ohear-0/dot/
+Exec:  ./get-stuff.pl map37 dot.log.gz expt-map25-16K-dot-ohear-0/dot/
+Exec:  ./get-stuff.pl map38 dot.log.gz expt-map25-16K-dot-ohear-0/dot/
+Exec:  ./get-stuff.pl map19 dot.log.gz expt-map25-16K-dot-ohear-0/dot/
+Exec:  ./get-stuff.pl map31 dot.log.gz expt-map25-16K-dot-ohear-0/dot/
+
+1.55user 0.30system 0:02.46elapsed 75%CPU (0avgtext+0avgdata 0maxresident)k
+0inputs+0outputs (0major+40895minor)pagefaults 0swaps
+-----> fetching sniffer logs from all nodes 
+export WORK_PATH=/tmp//dot ; time ./do-perhost.pl -t 600 -c 25 -f TOPOS/MAP.TXT './get-stuff.pl @HOST@ sniffer.log.gz expt-map25-16K-dot-ohear-0/sniffer/' 
+Exec:  ./get-stuff.pl map1 sniffer.log.gz expt-map25-16K-dot-ohear-0/sniffer/
+Exec:  ./get-stuff.pl map2 sniffer.log.gz expt-map25-16K-dot-ohear-0/sniffer/
+Exec:  ./get-stuff.pl map3 sniffer.log.gz expt-map25-16K-dot-ohear-0/sniffer/
+Exec:  ./get-stuff.pl map4 sniffer.log.gz expt-map25-16K-dot-ohear-0/sniffer/
+Exec:  ./get-stuff.pl map5 sniffer.log.gz expt-map25-16K-dot-ohear-0/sniffer/
+Exec:  ./get-stuff.pl map7 sniffer.log.gz expt-map25-16K-dot-ohear-0/sniffer/
+Exec:  ./get-stuff.pl map11 sniffer.log.gz expt-map25-16K-dot-ohear-0/sniffer/
+Exec:  ./get-stuff.pl map12 sniffer.log.gz expt-map25-16K-dot-ohear-0/sniffer/
+Exec:  ./get-stuff.pl map13 sniffer.log.gz expt-map25-16K-dot-ohear-0/sniffer/
+Exec:  ./get-stuff.pl map14 sniffer.log.gz expt-map25-16K-dot-ohear-0/sniffer/
+Exec:  ./get-stuff.pl map15 sniffer.log.gz expt-map25-16K-dot-ohear-0/sniffer/
+Exec:  ./get-stuff.pl map16 sniffer.log.gz expt-map25-16K-dot-ohear-0/sniffer/
+Exec:  ./get-stuff.pl map18 sniffer.log.gz expt-map25-16K-dot-ohear-0/sniffer/
+Exec:  ./get-stuff.pl map19 sniffer.log.gz expt-map25-16K-dot-ohear-0/sniffer/
+Exec:  ./get-stuff.pl map22 sniffer.log.gz expt-map25-16K-dot-ohear-0/sniffer/
+Exec:  ./get-stuff.pl map25 sniffer.log.gz expt-map25-16K-dot-ohear-0/sniffer/
+Exec:  ./get-stuff.pl map27 sniffer.log.gz expt-map25-16K-dot-ohear-0/sniffer/
+Exec:  ./get-stuff.pl map28 sniffer.log.gz expt-map25-16K-dot-ohear-0/sniffer/
+Exec:  ./get-stuff.pl map29 sniffer.log.gz expt-map25-16K-dot-ohear-0/sniffer/
+Exec:  ./get-stuff.pl map30 sniffer.log.gz expt-map25-16K-dot-ohear-0/sniffer/
+Exec:  ./get-stuff.pl map31 sniffer.log.gz expt-map25-16K-dot-ohear-0/sniffer/
+Exec:  ./get-stuff.pl map34 sniffer.log.gz expt-map25-16K-dot-ohear-0/sniffer/
+Exec:  ./get-stuff.pl map37 sniffer.log.gz expt-map25-16K-dot-ohear-0/sniffer/
+Exec:  ./get-stuff.pl map38 sniffer.log.gz expt-map25-16K-dot-ohear-0/sniffer/
+
+1.59user 0.33system 0:02.65elapsed 72%CPU (0avgtext+0avgdata 0maxresident)k
+0inputs+0outputs (0major+41606minor)pagefaults 0swaps
+-----> fetching gcp logs from all nodes 
+export WORK_PATH=/tmp//dot ; time ./do-perhost.pl -t 600 -c 25 -f TOPOS/MAP.TXT './get-stuff.pl @HOST@ gcp.log.gz expt-map25-16K-dot-ohear-0/gcp/' 
+Exec:  ./get-stuff.pl map1 gcp.log.gz expt-map25-16K-dot-ohear-0/gcp/
+Exec:  ./get-stuff.pl map2 gcp.log.gz expt-map25-16K-dot-ohear-0/gcp/
+Exec:  ./get-stuff.pl map3 gcp.log.gz expt-map25-16K-dot-ohear-0/gcp/
+Exec:  ./get-stuff.pl map4 gcp.log.gz expt-map25-16K-dot-ohear-0/gcp/
+Exec:  ./get-stuff.pl map5 gcp.log.gz expt-map25-16K-dot-ohear-0/gcp/
+Exec:  ./get-stuff.pl map7 gcp.log.gz expt-map25-16K-dot-ohear-0/gcp/
+Exec:  ./get-stuff.pl map11 gcp.log.gz expt-map25-16K-dot-ohear-0/gcp/
+Exec:  ./get-stuff.pl map12 gcp.log.gz expt-map25-16K-dot-ohear-0/gcp/
+Exec:  ./get-stuff.pl map13 gcp.log.gz expt-map25-16K-dot-ohear-0/gcp/
+Exec:  ./get-stuff.pl map14 gcp.log.gz expt-map25-16K-dot-ohear-0/gcp/
+Exec:  ./get-stuff.pl map15 gcp.log.gz expt-map25-16K-dot-ohear-0/gcp/
+Exec:  ./get-stuff.pl map16 gcp.log.gz expt-map25-16K-dot-ohear-0/gcp/
+Exec:  ./get-stuff.pl map19 gcp.log.gz expt-map25-16K-dot-ohear-0/gcp/
+Exec:  ./get-stuff.pl map22 gcp.log.gz expt-map25-16K-dot-ohear-0/gcp/
+Exec:  ./get-stuff.pl map25 gcp.log.gz expt-map25-16K-dot-ohear-0/gcp/
+Exec:  ./get-stuff.pl map27 gcp.log.gz expt-map25-16K-dot-ohear-0/gcp/
+Exec:  ./get-stuff.pl map28 gcp.log.gz expt-map25-16K-dot-ohear-0/gcp/
+Exec:  ./get-stuff.pl map29 gcp.log.gz expt-map25-16K-dot-ohear-0/gcp/
+Exec:  ./get-stuff.pl map30 gcp.log.gz expt-map25-16K-dot-ohear-0/gcp/
+Exec:  ./get-stuff.pl map31 gcp.log.gz expt-map25-16K-dot-ohear-0/gcp/
+Exec:  ./get-stuff.pl map34 gcp.log.gz expt-map25-16K-dot-ohear-0/gcp/
+Exec:  ./get-stuff.pl map37 gcp.log.gz expt-map25-16K-dot-ohear-0/gcp/
+Exec:  ./get-stuff.pl map38 gcp.log.gz expt-map25-16K-dot-ohear-0/gcp/
+Exec:  ./get-stuff.pl map18 gcp.log.gz expt-map25-16K-dot-ohear-0/gcp/
+
+1.19user 0.20system 0:02.37elapsed 58%CPU (0avgtext+0avgdata 0maxresident)k
+0inputs+0outputs (0major+28073minor)pagefaults 0swaps
+-----> fetching tcpdump logs from all nodes 
+export WORK_PATH=/tmp//dot ; time ./do-perhost.pl -t 600 -c 25 -f TOPOS/MAP.TXT './get-stuff.pl @HOST@ tcpdump.log.gz expt-map25-16K-dot-ohear-0/sniffer/' 
+Exec:  ./get-stuff.pl map1 tcpdump.log.gz expt-map25-16K-dot-ohear-0/sniffer/
+Exec:  ./get-stuff.pl map2 tcpdump.log.gz expt-map25-16K-dot-ohear-0/sniffer/
+Exec:  ./get-stuff.pl map3 tcpdump.log.gz expt-map25-16K-dot-ohear-0/sniffer/
+Exec:  ./get-stuff.pl map4 tcpdump.log.gz expt-map25-16K-dot-ohear-0/sniffer/
+Exec:  ./get-stuff.pl map5 tcpdump.log.gz expt-map25-16K-dot-ohear-0/sniffer/
+Exec:  ./get-stuff.pl map7 tcpdump.log.gz expt-map25-16K-dot-ohear-0/sniffer/
+Exec:  ./get-stuff.pl map11 tcpdump.log.gz expt-map25-16K-dot-ohear-0/sniffer/
+Exec:  ./get-stuff.pl map12 tcpdump.log.gz expt-map25-16K-dot-ohear-0/sniffer/
+Exec:  ./get-stuff.pl map13 tcpdump.log.gz expt-map25-16K-dot-ohear-0/sniffer/
+Exec:  ./get-stuff.pl map14 tcpdump.log.gz expt-map25-16K-dot-ohear-0/sniffer/
+Exec:  ./get-stuff.pl map15 tcpdump.log.gz expt-map25-16K-dot-ohear-0/sniffer/
+Exec:  ./get-stuff.pl map16 tcpdump.log.gz expt-map25-16K-dot-ohear-0/sniffer/
+Exec:  ./get-stuff.pl map19 tcpdump.log.gz expt-map25-16K-dot-ohear-0/sniffer/
+Exec:  ./get-stuff.pl map22 tcpdump.log.gz expt-map25-16K-dot-ohear-0/sniffer/
+Exec:  ./get-stuff.pl map25 tcpdump.log.gz expt-map25-16K-dot-ohear-0/sniffer/
+Exec:  ./get-stuff.pl map27 tcpdump.log.gz expt-map25-16K-dot-ohear-0/sniffer/
+Exec:  ./get-stuff.pl map28 tcpdump.log.gz expt-map25-16K-dot-ohear-0/sniffer/
+Exec:  ./get-stuff.pl map29 tcpdump.log.gz expt-map25-16K-dot-ohear-0/sniffer/
+Exec:  ./get-stuff.pl map31 tcpdump.log.gz expt-map25-16K-dot-ohear-0/sniffer/
+Exec:  ./get-stuff.pl map34 tcpdump.log.gz expt-map25-16K-dot-ohear-0/sniffer/
+Exec:  ./get-stuff.pl map37 tcpdump.log.gz expt-map25-16K-dot-ohear-0/sniffer/
+Exec:  ./get-stuff.pl map38 tcpdump.log.gz expt-map25-16K-dot-ohear-0/sniffer/
+Exec:  ./get-stuff.pl map18 tcpdump.log.gz expt-map25-16K-dot-ohear-0/sniffer/
+Exec:  ./get-stuff.pl map30 tcpdump.log.gz expt-map25-16K-dot-ohear-0/sniffer/
+
+2.73user 1.01system 0:10.98elapsed 34%CPU (0avgtext+0avgdata 0maxresident)k
+0inputs+0outputs (0major+42841minor)pagefaults 0swaps
+time ./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo rm -f /tmp/dot/*.log && rm -f /tmp/dot/*.log.gz'"
+Exec:  ssh map1 'sudo rm -f /tmp/dot/*.log && rm -f /tmp/dot/*.log.gz'
+Exec:  ssh map2 'sudo rm -f /tmp/dot/*.log && rm -f /tmp/dot/*.log.gz'
+Exec:  ssh map3 'sudo rm -f /tmp/dot/*.log && rm -f /tmp/dot/*.log.gz'
+Exec:  ssh map5 'sudo rm -f /tmp/dot/*.log && rm -f /tmp/dot/*.log.gz'
+Exec:  ssh map7 'sudo rm -f /tmp/dot/*.log && rm -f /tmp/dot/*.log.gz'
+Exec:  ssh map11 'sudo rm -f /tmp/dot/*.log && rm -f /tmp/dot/*.log.gz'
+Exec:  ssh map12 'sudo rm -f /tmp/dot/*.log && rm -f /tmp/dot/*.log.gz'
+Exec:  ssh map13 'sudo rm -f /tmp/dot/*.log && rm -f /tmp/dot/*.log.gz'
+Exec:  ssh map14 'sudo rm -f /tmp/dot/*.log && rm -f /tmp/dot/*.log.gz'
+Exec:  ssh map4 'sudo rm -f /tmp/dot/*.log && rm -f /tmp/dot/*.log.gz'
+Exec:  ssh map16 'sudo rm -f /tmp/dot/*.log && rm -f /tmp/dot/*.log.gz'
+Exec:  ssh map18 'sudo rm -f /tmp/dot/*.log && rm -f /tmp/dot/*.log.gz'
+Exec:  ssh map19 'sudo rm -f /tmp/dot/*.log && rm -f /tmp/dot/*.log.gz'
+Exec:  ssh map22 'sudo rm -f /tmp/dot/*.log && rm -f /tmp/dot/*.log.gz'
+Exec:  ssh map25 'sudo rm -f /tmp/dot/*.log && rm -f /tmp/dot/*.log.gz'
+Exec:  ssh map27 'sudo rm -f /tmp/dot/*.log && rm -f /tmp/dot/*.log.gz'
+Exec:  ssh map28 'sudo rm -f /tmp/dot/*.log && rm -f /tmp/dot/*.log.gz'
+Exec:  ssh map29 'sudo rm -f /tmp/dot/*.log && rm -f /tmp/dot/*.log.gz'
+Exec:  ssh map15 'sudo rm -f /tmp/dot/*.log && rm -f /tmp/dot/*.log.gz'
+Exec:  ssh map30 'sudo rm -f /tmp/dot/*.log && rm -f /tmp/dot/*.log.gz'
+Exec:  ssh map31 'sudo rm -f /tmp/dot/*.log && rm -f /tmp/dot/*.log.gz'
+Exec:  ssh map34 'sudo rm -f /tmp/dot/*.log && rm -f /tmp/dot/*.log.gz'
+Exec:  ssh map37 'sudo rm -f /tmp/dot/*.log && rm -f /tmp/dot/*.log.gz'
+Exec:  ssh map38 'sudo rm -f /tmp/dot/*.log && rm -f /tmp/dot/*.log.gz'
+sudo: No match.
+
+     map22  failed
+0.54user 0.14system 0:01.18elapsed 57%CPU (0avgtext+0avgdata 0maxresident)k
+0inputs+0outputs (0major+22097minor)pagefaults 0swaps
+--------------------------------------------
+-----> Figuring out the problems
+--------------------------------------------
+--------------------------------------------
+copying data to moo
+Sun Mar  9 12:07:36 EST 2008
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Sun Mar  9 12:08:50 EST 2008
+-----------------------------------------------------
+-----------------------------------------------------
+-----------------------------------------------------

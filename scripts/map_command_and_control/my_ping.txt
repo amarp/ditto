@@ -1,0 +1,751 @@
+"my" variable $cmd masks earlier declaration in same scope at setup/setup.pl line 299.
+ssh map1 "/sbin/ifconfig | grep '1\.0\.0' | awk '{print $2}'"
+map1           inet addr:1.0.0.1  Bcast:1.0.0.255  Mask:255.255.255.0 1.0.0.1
+ssh map2 "/sbin/ifconfig | grep '1\.0\.0' | awk '{print $2}'"
+map2           inet addr:1.0.0.2  Bcast:1.0.0.255  Mask:255.255.255.0 1.0.0.2
+ssh map3 "/sbin/ifconfig | grep '1\.0\.0' | awk '{print $2}'"
+map3           inet addr:1.0.0.3  Bcast:1.0.0.255  Mask:255.255.255.0 1.0.0.3
+ssh map4 "/sbin/ifconfig | grep '1\.0\.0' | awk '{print $2}'"
+map4           inet addr:1.0.0.4  Bcast:1.0.0.255  Mask:255.255.255.0 1.0.0.4
+ssh map5 "/sbin/ifconfig | grep '1\.0\.0' | awk '{print $2}'"
+map5           inet addr:1.0.0.5  Bcast:1.0.0.255  Mask:255.255.255.0 1.0.0.5
+ssh map7 "/sbin/ifconfig | grep '1\.0\.0' | awk '{print $2}'"
+map7           inet addr:1.0.0.7  Bcast:1.0.0.255  Mask:255.255.255.0 1.0.0.7
+ssh map11 "/sbin/ifconfig | grep '1\.0\.0' | awk '{print $2}'"
+map11           inet addr:1.0.0.11  Bcast:1.0.0.255  Mask:255.255.255.0 1.0.0.11
+ssh map13 "/sbin/ifconfig | grep '1\.0\.0' | awk '{print $2}'"
+map13           inet addr:1.0.0.13  Bcast:1.0.0.255  Mask:255.255.255.0 1.0.0.13
+ssh map14 "/sbin/ifconfig | grep '1\.0\.0' | awk '{print $2}'"
+map14           inet addr:1.0.0.14  Bcast:1.0.0.255  Mask:255.255.255.0 1.0.0.14
+ssh map15 "/sbin/ifconfig | grep '1\.0\.0' | awk '{print $2}'"
+map15           inet addr:1.0.0.15  Bcast:1.0.0.255  Mask:255.255.255.0 1.0.0.15
+ssh map16 "/sbin/ifconfig | grep '1\.0\.0' | awk '{print $2}'"
+map16           inet addr:1.0.0.16  Bcast:1.0.0.255  Mask:255.255.255.0 1.0.0.16
+ssh map18 "/sbin/ifconfig | grep '1\.0\.0' | awk '{print $2}'"
+map18           inet addr:1.0.0.18  Bcast:1.0.0.255  Mask:255.255.255.0 1.0.0.18
+ssh map19 "/sbin/ifconfig | grep '1\.0\.0' | awk '{print $2}'"
+map19           inet addr:1.0.0.19  Bcast:1.0.0.255  Mask:255.255.255.0 1.0.0.19
+ssh map22 "/sbin/ifconfig | grep '1\.0\.0' | awk '{print $2}'"
+map22           inet addr:1.0.0.22  Bcast:1.0.0.255  Mask:255.255.255.0 1.0.0.22
+ssh map25 "/sbin/ifconfig | grep '1\.0\.0' | awk '{print $2}'"
+map25           inet addr:1.0.0.25  Bcast:1.0.0.255  Mask:255.255.255.0 1.0.0.25
+ssh map27 "/sbin/ifconfig | grep '1\.0\.0' | awk '{print $2}'"
+map27           inet addr:1.0.0.27  Bcast:1.0.0.255  Mask:255.255.255.0 1.0.0.27
+ssh map28 "/sbin/ifconfig | grep '1\.0\.0' | awk '{print $2}'"
+map28           inet addr:1.0.0.28  Bcast:1.0.0.255  Mask:255.255.255.0 1.0.0.28
+ssh map29 "/sbin/ifconfig | grep '1\.0\.0' | awk '{print $2}'"
+map29           inet addr:1.0.0.29  Bcast:1.0.0.255  Mask:255.255.255.0 1.0.0.29
+ssh map30 "/sbin/ifconfig | grep '1\.0\.0' | awk '{print $2}'"
+map30           inet addr:1.0.0.30  Bcast:1.0.0.255  Mask:255.255.255.0 1.0.0.30
+ssh map34 "/sbin/ifconfig | grep '1\.0\.0' | awk '{print $2}'"
+map34           inet addr:1.0.0.34  Bcast:1.0.0.255  Mask:255.255.255.0 1.0.0.34
+ssh map37 "/sbin/ifconfig | grep '1\.0\.0' | awk '{print $2}'"
+map37           inet addr:1.0.0.37  Bcast:1.0.0.255  Mask:255.255.255.0 1.0.0.37
+ssh map38 "/sbin/ifconfig | grep '1\.0\.0' | awk '{print $2}'"
+map38           inet addr:1.0.0.38  Bcast:1.0.0.255  Mask:255.255.255.0 1.0.0.38
+-----------------------------------------------
+-----------------------------------------------
+-----------------------------------------------
+mkdir ping
+mkdir: cannot create directory `ping': File exists
+ssh map1 'ping -R -i 1 -c 20 1.0.0.11' >& ping/map1.log
+ssh map11 'ping -R -i 1 -c 20 1.0.0.1'
+PING 1.0.0.1 (1.0.0.1) 56(124) bytes of data.
+64 bytes from 1.0.0.1: icmp_seq=1 ttl=62 time=6.01 ms
+RR: 	1.0.0.11
+	1.0.0.30
+	1.0.0.13
+	1.0.0.1
+	1.0.0.1
+	1.0.0.13
+	1.0.0.30
+	1.0.0.11
+
+64 bytes from 1.0.0.1: icmp_seq=2 ttl=62 time=7.68 ms	(same route)
+64 bytes from 1.0.0.1: icmp_seq=3 ttl=62 time=6.42 ms	(same route)
+64 bytes from 1.0.0.1: icmp_seq=4 ttl=62 time=6.59 ms	(same route)
+64 bytes from 1.0.0.1: icmp_seq=5 ttl=62 time=10.5 ms	(same route)
+64 bytes from 1.0.0.1: icmp_seq=6 ttl=62 time=7.53 ms	(same route)
+64 bytes from 1.0.0.1: icmp_seq=8 ttl=62 time=10.4 ms	(same route)
+64 bytes from 1.0.0.1: icmp_seq=9 ttl=62 time=9.19 ms	(same route)
+64 bytes from 1.0.0.1: icmp_seq=10 ttl=62 time=6.23 ms	(same route)
+64 bytes from 1.0.0.1: icmp_seq=11 ttl=62 time=8.36 ms	(same route)
+64 bytes from 1.0.0.1: icmp_seq=12 ttl=62 time=6.93 ms	(same route)
+64 bytes from 1.0.0.1: icmp_seq=13 ttl=62 time=6.62 ms	(same route)
+64 bytes from 1.0.0.1: icmp_seq=14 ttl=62 time=9.23 ms	(same route)
+64 bytes from 1.0.0.1: icmp_seq=16 ttl=62 time=6.78 ms	(same route)
+64 bytes from 1.0.0.1: icmp_seq=17 ttl=62 time=6.03 ms	(same route)
+64 bytes from 1.0.0.1: icmp_seq=18 ttl=62 time=7.84 ms	(same route)
+64 bytes from 1.0.0.1: icmp_seq=19 ttl=62 time=7.16 ms	(same route)
+64 bytes from 1.0.0.1: icmp_seq=20 ttl=62 time=8.00 ms	(same route)
+
+--- 1.0.0.1 ping statistics ---
+20 packets transmitted, 18 received, 10% packet loss, time 19013ms
+rtt min/avg/max/mdev = 6.019/7.649/10.538/1.382 ms
+RR: 	1.0.0.1 	1.0.0.13 	1.0.0.30 	1.0.0.11 	1.0.0.11 	1.0.0.30 	1.0.0.13 	1.0.0.1  From 1.0.0.13: icmp_seq=2 Redirect Host(New nexthop: 1.0.0.30)  || 3.5
+ssh map2 'ping -R -i 1 -c 20 1.0.0.11' >& ping/map2.log
+ssh map11 'ping -R -i 1 -c 20 1.0.0.2'
+PING 1.0.0.2 (1.0.0.2) 56(124) bytes of data.
+From 1.0.0.37: icmp_seq=1 Redirect Host(New nexthop: 1.0.0.2)
+64 bytes from 1.0.0.2: icmp_seq=1 ttl=63 time=17.5 ms
+RR: 	1.0.0.11
+	1.0.0.37
+	1.0.0.2
+	1.0.0.2
+	1.0.0.37
+	1.0.0.11
+
+64 bytes from 1.0.0.2: icmp_seq=2 ttl=63 time=13.3 ms	(same route)
+64 bytes from 1.0.0.2: icmp_seq=8 ttl=63 time=27.4 ms	(same route)
+64 bytes from 1.0.0.2: icmp_seq=10 ttl=63 time=15.3 ms	(same route)
+64 bytes from 1.0.0.2: icmp_seq=10 ttl=63 time=29.4 ms (DUP!)	(same route)
+64 bytes from 1.0.0.2: icmp_seq=11 ttl=63 time=13.8 ms	(same route)
+64 bytes from 1.0.0.2: icmp_seq=16 ttl=63 time=15.2 ms	(same route)
+64 bytes from 1.0.0.2: icmp_seq=17 ttl=63 time=10.9 ms	(same route)
+64 bytes from 1.0.0.2: icmp_seq=20 ttl=63 time=20.5 ms	(same route)
+
+--- 1.0.0.2 ping statistics ---
+20 packets transmitted, 8 received, +1 duplicates, 60% packet loss, time 19004ms
+rtt min/avg/max/mdev = 10.914/18.195/29.431/6.055 ms
+RR: 	1.0.0.2 	1.0.0.37 	1.0.0.11 	1.0.0.11 	1.0.0.37 	1.0.0.2   || 2
+ssh map3 'ping -R -i 1 -c 20 1.0.0.11' >& ping/map3.log
+ssh map11 'ping -R -i 1 -c 20 1.0.0.3'
+PING 1.0.0.3 (1.0.0.3) 56(124) bytes of data.
+64 bytes from 1.0.0.3: icmp_seq=1 ttl=63 time=4.89 ms
+RR: 	1.0.0.11
+	1.0.0.30
+	1.0.0.3
+	1.0.0.3
+	1.0.0.30
+	1.0.0.11
+
+64 bytes from 1.0.0.3: icmp_seq=2 ttl=63 time=4.91 ms	(same route)
+64 bytes from 1.0.0.3: icmp_seq=3 ttl=63 time=6.59 ms	(same route)
+64 bytes from 1.0.0.3: icmp_seq=4 ttl=63 time=4.85 ms	(same route)
+64 bytes from 1.0.0.3: icmp_seq=5 ttl=63 time=4.34 ms	(same route)
+64 bytes from 1.0.0.3: icmp_seq=6 ttl=63 time=4.61 ms	(same route)
+64 bytes from 1.0.0.3: icmp_seq=7 ttl=63 time=5.10 ms	(same route)
+64 bytes from 1.0.0.3: icmp_seq=8 ttl=63 time=3.22 ms	(same route)
+64 bytes from 1.0.0.3: icmp_seq=9 ttl=63 time=4.62 ms	(same route)
+64 bytes from 1.0.0.3: icmp_seq=10 ttl=63 time=4.12 ms	(same route)
+64 bytes from 1.0.0.3: icmp_seq=11 ttl=63 time=4.73 ms	(same route)
+64 bytes from 1.0.0.3: icmp_seq=12 ttl=63 time=8.09 ms	(same route)
+64 bytes from 1.0.0.3: icmp_seq=13 ttl=63 time=4.44 ms	(same route)
+64 bytes from 1.0.0.3: icmp_seq=14 ttl=63 time=5.24 ms	(same route)
+64 bytes from 1.0.0.3: icmp_seq=15 ttl=63 time=5.51 ms	(same route)
+64 bytes from 1.0.0.3: icmp_seq=16 ttl=63 time=4.90 ms	(same route)
+64 bytes from 1.0.0.3: icmp_seq=17 ttl=63 time=4.28 ms	(same route)
+64 bytes from 1.0.0.3: icmp_seq=18 ttl=63 time=4.94 ms	(same route)
+64 bytes from 1.0.0.3: icmp_seq=19 ttl=63 time=6.25 ms	(same route)
+64 bytes from 1.0.0.3: icmp_seq=20 ttl=63 time=5.42 ms	(same route)
+
+--- 1.0.0.3 ping statistics ---
+20 packets transmitted, 20 received, 0% packet loss, time 19016ms
+rtt min/avg/max/mdev = 3.220/5.056/8.093/0.995 ms
+RR: 	1.0.0.3 	1.0.0.30 	1.0.0.11 	1.0.0.11 	1.0.0.30 	1.0.0.3  From 1.0.0.30: icmp_seq=2 Redirect Host(New nexthop: 1.0.0.11)  || 2.5
+ssh map4 'ping -R -i 1 -c 20 1.0.0.11' >& ping/map4.log
+ssh map11 'ping -R -i 1 -c 20 1.0.0.4'
+PING 1.0.0.4 (1.0.0.4) 56(124) bytes of data.
+64 bytes from 1.0.0.4: icmp_seq=1 ttl=63 time=18.8 ms
+RR: 	1.0.0.11
+	1.0.0.37
+	1.0.0.4
+	1.0.0.4
+	1.0.0.37
+	1.0.0.11
+
+64 bytes from 1.0.0.4: icmp_seq=2 ttl=63 time=8.32 ms	(same route)
+From 1.0.0.37: icmp_seq=3 Redirect Host(New nexthop: 1.0.0.4)
+64 bytes from 1.0.0.4: icmp_seq=3 ttl=63 time=34.6 ms	(same route)
+64 bytes from 1.0.0.4: icmp_seq=4 ttl=63 time=9.94 ms	(same route)
+64 bytes from 1.0.0.4: icmp_seq=4 ttl=63 time=34.2 ms (DUP!)	(same route)
+64 bytes from 1.0.0.4: icmp_seq=9 ttl=63 time=8.72 ms	(same route)
+64 bytes from 1.0.0.4: icmp_seq=9 ttl=63 time=38.2 ms (DUP!)	(same route)
+64 bytes from 1.0.0.4: icmp_seq=10 ttl=63 time=21.5 ms	(same route)
+64 bytes from 1.0.0.4: icmp_seq=11 ttl=63 time=14.1 ms	(same route)
+64 bytes from 1.0.0.4: icmp_seq=12 ttl=63 time=9.43 ms	(same route)
+64 bytes from 1.0.0.4: icmp_seq=13 ttl=63 time=48.2 ms	(same route)
+64 bytes from 1.0.0.4: icmp_seq=14 ttl=63 time=10.6 ms	(same route)
+64 bytes from 1.0.0.4: icmp_seq=14 ttl=63 time=37.3 ms (DUP!)	(same route)
+64 bytes from 1.0.0.4: icmp_seq=16 ttl=63 time=11.7 ms	(same route)
+64 bytes from 1.0.0.4: icmp_seq=17 ttl=63 time=9.36 ms	(same route)
+64 bytes from 1.0.0.4: icmp_seq=18 ttl=63 time=23.8 ms	(same route)
+64 bytes from 1.0.0.4: icmp_seq=18 ttl=63 time=51.7 ms (DUP!)	(same route)
+64 bytes from 1.0.0.4: icmp_seq=20 ttl=63 time=24.4 ms	(same route)
+
+--- 1.0.0.4 ping statistics ---
+20 packets transmitted, 14 received, +4 duplicates, 30% packet loss, time 19009ms
+rtt min/avg/max/mdev = 8.324/23.075/51.708/13.953 ms
+RR: 	1.0.0.4 	1.0.0.37 	1.0.0.11 	1.0.0.11 	1.0.0.37 	1.0.0.4  From 1.0.0.37: icmp_seq=5 Redirect Host(New nexthop: 1.0.0.11) From 1.0.0.37: icmp_seq=6 Redirect Host(New nexthop: 1.0.0.11)  || 3
+ssh map5 'ping -R -i 1 -c 20 1.0.0.11' >& ping/map5.log
+ssh map11 'ping -R -i 1 -c 20 1.0.0.5'
+PING 1.0.0.5 (1.0.0.5) 56(124) bytes of data.
+64 bytes from 1.0.0.5: icmp_seq=1 ttl=64 time=2.60 ms
+RR: 	1.0.0.11
+	1.0.0.5
+	1.0.0.5
+	1.0.0.11
+
+64 bytes from 1.0.0.5: icmp_seq=2 ttl=64 time=2.66 ms	(same route)
+64 bytes from 1.0.0.5: icmp_seq=3 ttl=64 time=3.10 ms	(same route)
+64 bytes from 1.0.0.5: icmp_seq=4 ttl=64 time=2.79 ms	(same route)
+64 bytes from 1.0.0.5: icmp_seq=5 ttl=64 time=2.41 ms	(same route)
+64 bytes from 1.0.0.5: icmp_seq=6 ttl=64 time=3.92 ms	(same route)
+64 bytes from 1.0.0.5: icmp_seq=7 ttl=64 time=2.87 ms	(same route)
+64 bytes from 1.0.0.5: icmp_seq=8 ttl=64 time=2.51 ms	(same route)
+64 bytes from 1.0.0.5: icmp_seq=9 ttl=64 time=4.35 ms	(same route)
+64 bytes from 1.0.0.5: icmp_seq=10 ttl=64 time=4.27 ms	(same route)
+64 bytes from 1.0.0.5: icmp_seq=11 ttl=64 time=2.35 ms	(same route)
+64 bytes from 1.0.0.5: icmp_seq=12 ttl=64 time=2.51 ms	(same route)
+64 bytes from 1.0.0.5: icmp_seq=13 ttl=64 time=2.33 ms	(same route)
+64 bytes from 1.0.0.5: icmp_seq=14 ttl=64 time=3.35 ms	(same route)
+64 bytes from 1.0.0.5: icmp_seq=15 ttl=64 time=2.77 ms	(same route)
+64 bytes from 1.0.0.5: icmp_seq=16 ttl=64 time=2.79 ms	(same route)
+64 bytes from 1.0.0.5: icmp_seq=17 ttl=64 time=2.85 ms	(same route)
+64 bytes from 1.0.0.5: icmp_seq=18 ttl=64 time=2.98 ms	(same route)
+64 bytes from 1.0.0.5: icmp_seq=19 ttl=64 time=2.65 ms	(same route)
+64 bytes from 1.0.0.5: icmp_seq=20 ttl=64 time=2.83 ms	(same route)
+
+--- 1.0.0.5 ping statistics ---
+20 packets transmitted, 20 received, 0% packet loss, time 19016ms
+rtt min/avg/max/mdev = 2.334/2.949/4.351/0.580 ms
+RR: 	1.0.0.5 	1.0.0.11 	1.0.0.11 	1.0.0.5   || 1
+ssh map7 'ping -R -i 1 -c 20 1.0.0.11' >& ping/map7.log
+ssh map11 'ping -R -i 1 -c 20 1.0.0.7'
+PING 1.0.0.7 (1.0.0.7) 56(124) bytes of data.
+64 bytes from 1.0.0.7: icmp_seq=1 ttl=62 time=6.59 ms
+RR: 	1.0.0.11
+	1.0.0.30
+	1.0.0.29
+	1.0.0.7
+	1.0.0.7
+	1.0.0.29
+	1.0.0.30
+	1.0.0.11
+
+64 bytes from 1.0.0.7: icmp_seq=2 ttl=62 time=5.99 ms	(same route)
+64 bytes from 1.0.0.7: icmp_seq=3 ttl=62 time=6.01 ms	(same route)
+64 bytes from 1.0.0.7: icmp_seq=5 ttl=62 time=5.78 ms	(same route)
+64 bytes from 1.0.0.7: icmp_seq=6 ttl=62 time=6.52 ms	(same route)
+64 bytes from 1.0.0.7: icmp_seq=7 ttl=62 time=8.42 ms	(same route)
+64 bytes from 1.0.0.7: icmp_seq=8 ttl=62 time=6.26 ms	(same route)
+64 bytes from 1.0.0.7: icmp_seq=9 ttl=62 time=6.14 ms	(same route)
+64 bytes from 1.0.0.7: icmp_seq=10 ttl=62 time=10.8 ms	(same route)
+64 bytes from 1.0.0.7: icmp_seq=11 ttl=62 time=7.14 ms	(same route)
+64 bytes from 1.0.0.7: icmp_seq=12 ttl=62 time=6.42 ms	(same route)
+64 bytes from 1.0.0.7: icmp_seq=13 ttl=62 time=7.39 ms	(same route)
+64 bytes from 1.0.0.7: icmp_seq=14 ttl=62 time=6.56 ms	(same route)
+64 bytes from 1.0.0.7: icmp_seq=15 ttl=62 time=5.83 ms	(same route)
+64 bytes from 1.0.0.7: icmp_seq=16 ttl=62 time=4.80 ms	(same route)
+64 bytes from 1.0.0.7: icmp_seq=17 ttl=62 time=6.30 ms	(same route)
+64 bytes from 1.0.0.7: icmp_seq=18 ttl=62 time=6.30 ms	(same route)
+64 bytes from 1.0.0.7: icmp_seq=19 ttl=62 time=6.30 ms	(same route)
+64 bytes from 1.0.0.7: icmp_seq=20 ttl=62 time=7.92 ms	(same route)
+
+--- 1.0.0.7 ping statistics ---
+20 packets transmitted, 19 received, 5% packet loss, time 19014ms
+rtt min/avg/max/mdev = 4.803/6.717/10.856/1.253 ms
+RR: 	1.0.0.7 	1.0.0.29 	1.0.0.30 	1.0.0.11 	1.0.0.11 	1.0.0.30 	1.0.0.29 	1.0.0.7  From 1.0.0.29: icmp_seq=2 Redirect Host(New nexthop: 1.0.0.30)  || 3.5
+ssh map13 'ping -R -i 1 -c 20 1.0.0.11' >& ping/map13.log
+ssh map11 'ping -R -i 1 -c 20 1.0.0.13'
+PING 1.0.0.13 (1.0.0.13) 56(124) bytes of data.
+64 bytes from 1.0.0.13: icmp_seq=1 ttl=63 time=4.81 ms
+RR: 	1.0.0.11
+	1.0.0.30
+	1.0.0.13
+	1.0.0.13
+	1.0.0.30
+	1.0.0.11
+
+64 bytes from 1.0.0.13: icmp_seq=2 ttl=63 time=6.88 ms	(same route)
+64 bytes from 1.0.0.13: icmp_seq=3 ttl=63 time=4.59 ms	(same route)
+64 bytes from 1.0.0.13: icmp_seq=4 ttl=63 time=5.13 ms	(same route)
+64 bytes from 1.0.0.13: icmp_seq=5 ttl=63 time=4.79 ms	(same route)
+64 bytes from 1.0.0.13: icmp_seq=6 ttl=63 time=5.54 ms	(same route)
+64 bytes from 1.0.0.13: icmp_seq=8 ttl=63 time=4.99 ms	(same route)
+64 bytes from 1.0.0.13: icmp_seq=9 ttl=63 time=3.30 ms	(same route)
+64 bytes from 1.0.0.13: icmp_seq=10 ttl=63 time=4.64 ms	(same route)
+64 bytes from 1.0.0.13: icmp_seq=11 ttl=63 time=12.0 ms	(same route)
+64 bytes from 1.0.0.13: icmp_seq=12 ttl=63 time=4.51 ms	(same route)
+64 bytes from 1.0.0.13: icmp_seq=13 ttl=63 time=13.7 ms	(same route)
+64 bytes from 1.0.0.13: icmp_seq=14 ttl=63 time=7.77 ms	(same route)
+64 bytes from 1.0.0.13: icmp_seq=15 ttl=63 time=5.00 ms	(same route)
+64 bytes from 1.0.0.13: icmp_seq=16 ttl=63 time=5.67 ms	(same route)
+64 bytes from 1.0.0.13: icmp_seq=17 ttl=63 time=6.71 ms	(same route)
+64 bytes from 1.0.0.13: icmp_seq=18 ttl=63 time=6.21 ms	(same route)
+64 bytes from 1.0.0.13: icmp_seq=19 ttl=63 time=4.62 ms	(same route)
+64 bytes from 1.0.0.13: icmp_seq=20 ttl=63 time=6.81 ms	(same route)
+
+--- 1.0.0.13 ping statistics ---
+20 packets transmitted, 19 received, 5% packet loss, time 19014ms
+rtt min/avg/max/mdev = 3.306/6.200/13.787/2.537 ms
+RR: 	1.0.0.13 	1.0.0.30 	1.0.0.11 	1.0.0.11 	1.0.0.30 	1.0.0.13  From 1.0.0.30: icmp_seq=2 Redirect Host(New nexthop: 1.0.0.11)  || 2.5
+ssh map14 'ping -R -i 1 -c 20 1.0.0.11' >& ping/map14.log
+ssh map11 'ping -R -i 1 -c 20 1.0.0.14'
+PING 1.0.0.14 (1.0.0.14) 56(124) bytes of data.
+64 bytes from 1.0.0.14: icmp_seq=1 ttl=64 time=1.08 ms
+RR: 	1.0.0.11
+	1.0.0.14
+	1.0.0.14
+	1.0.0.11
+
+64 bytes from 1.0.0.14: icmp_seq=2 ttl=64 time=4.05 ms	(same route)
+64 bytes from 1.0.0.14: icmp_seq=3 ttl=64 time=2.46 ms	(same route)
+64 bytes from 1.0.0.14: icmp_seq=4 ttl=64 time=2.51 ms	(same route)
+64 bytes from 1.0.0.14: icmp_seq=5 ttl=64 time=2.49 ms	(same route)
+64 bytes from 1.0.0.14: icmp_seq=6 ttl=64 time=2.88 ms	(same route)
+64 bytes from 1.0.0.14: icmp_seq=7 ttl=64 time=2.70 ms	(same route)
+64 bytes from 1.0.0.14: icmp_seq=8 ttl=64 time=3.29 ms	(same route)
+64 bytes from 1.0.0.14: icmp_seq=9 ttl=64 time=2.39 ms	(same route)
+64 bytes from 1.0.0.14: icmp_seq=10 ttl=64 time=2.50 ms	(same route)
+64 bytes from 1.0.0.14: icmp_seq=11 ttl=64 time=2.83 ms	(same route)
+64 bytes from 1.0.0.14: icmp_seq=12 ttl=64 time=3.82 ms	(same route)
+64 bytes from 1.0.0.14: icmp_seq=13 ttl=64 time=2.27 ms	(same route)
+64 bytes from 1.0.0.14: icmp_seq=14 ttl=64 time=2.96 ms	(same route)
+64 bytes from 1.0.0.14: icmp_seq=15 ttl=64 time=2.59 ms	(same route)
+64 bytes from 1.0.0.14: icmp_seq=16 ttl=64 time=2.79 ms	(same route)
+64 bytes from 1.0.0.14: icmp_seq=17 ttl=64 time=2.62 ms	(same route)
+64 bytes from 1.0.0.14: icmp_seq=18 ttl=64 time=2.61 ms	(same route)
+64 bytes from 1.0.0.14: icmp_seq=19 ttl=64 time=2.27 ms	(same route)
+64 bytes from 1.0.0.14: icmp_seq=20 ttl=64 time=2.39 ms	(same route)
+
+--- 1.0.0.14 ping statistics ---
+20 packets transmitted, 20 received, 0% packet loss, time 19016ms
+rtt min/avg/max/mdev = 1.085/2.680/4.057/0.590 ms
+RR: 	1.0.0.14 	1.0.0.11 	1.0.0.11 	1.0.0.14   || 1
+ssh map15 'ping -R -i 1 -c 20 1.0.0.11' >& ping/map15.log
+ssh map11 'ping -R -i 1 -c 20 1.0.0.15'
+PING 1.0.0.15 (1.0.0.15) 56(124) bytes of data.
+64 bytes from 1.0.0.15: icmp_seq=1 ttl=63 time=7.71 ms
+RR: 	1.0.0.11
+	1.0.0.22
+	1.0.0.15
+	1.0.0.15
+	1.0.0.22
+	1.0.0.11
+
+64 bytes from 1.0.0.15: icmp_seq=2 ttl=63 time=5.26 ms	(same route)
+64 bytes from 1.0.0.15: icmp_seq=3 ttl=63 time=4.51 ms	(same route)
+64 bytes from 1.0.0.15: icmp_seq=4 ttl=63 time=5.63 ms	(same route)
+64 bytes from 1.0.0.15: icmp_seq=5 ttl=63 time=4.84 ms	(same route)
+64 bytes from 1.0.0.15: icmp_seq=6 ttl=63 time=5.20 ms	(same route)
+64 bytes from 1.0.0.15: icmp_seq=7 ttl=63 time=4.85 ms	(same route)
+64 bytes from 1.0.0.15: icmp_seq=8 ttl=63 time=5.35 ms	(same route)
+64 bytes from 1.0.0.15: icmp_seq=9 ttl=63 time=5.37 ms	(same route)
+64 bytes from 1.0.0.15: icmp_seq=10 ttl=63 time=4.55 ms	(same route)
+64 bytes from 1.0.0.15: icmp_seq=11 ttl=63 time=5.14 ms	(same route)
+64 bytes from 1.0.0.15: icmp_seq=12 ttl=63 time=5.13 ms	(same route)
+64 bytes from 1.0.0.15: icmp_seq=13 ttl=63 time=6.15 ms	(same route)
+64 bytes from 1.0.0.15: icmp_seq=14 ttl=63 time=5.37 ms	(same route)
+64 bytes from 1.0.0.15: icmp_seq=15 ttl=63 time=4.83 ms	(same route)
+64 bytes from 1.0.0.15: icmp_seq=16 ttl=63 time=4.87 ms	(same route)
+64 bytes from 1.0.0.15: icmp_seq=17 ttl=63 time=4.95 ms	(same route)
+64 bytes from 1.0.0.15: icmp_seq=18 ttl=63 time=4.69 ms	(same route)
+64 bytes from 1.0.0.15: icmp_seq=19 ttl=63 time=5.90 ms	(same route)
+64 bytes from 1.0.0.15: icmp_seq=20 ttl=63 time=5.25 ms	(same route)
+
+--- 1.0.0.15 ping statistics ---
+20 packets transmitted, 20 received, 0% packet loss, time 19017ms
+rtt min/avg/max/mdev = 4.519/5.281/7.717/0.698 ms
+RR: 	1.0.0.15 	1.0.0.22 	1.0.0.11 	1.0.0.11 	1.0.0.22 	1.0.0.15   || 2
+ssh map16 'ping -R -i 1 -c 20 1.0.0.11' >& ping/map16.log
+ssh map11 'ping -R -i 1 -c 20 1.0.0.16'
+PING 1.0.0.16 (1.0.0.16) 56(124) bytes of data.
+64 bytes from 1.0.0.16: icmp_seq=1 ttl=62 time=7.30 ms
+RR: 	1.0.0.11
+	1.0.0.30
+	1.0.0.13
+	1.0.0.16
+	1.0.0.16
+	1.0.0.13
+	1.0.0.30
+	1.0.0.11
+
+64 bytes from 1.0.0.16: icmp_seq=2 ttl=62 time=6.37 ms	(same route)
+64 bytes from 1.0.0.16: icmp_seq=3 ttl=62 time=6.77 ms	(same route)
+64 bytes from 1.0.0.16: icmp_seq=4 ttl=62 time=6.66 ms	(same route)
+64 bytes from 1.0.0.16: icmp_seq=5 ttl=62 time=6.08 ms	(same route)
+64 bytes from 1.0.0.16: icmp_seq=6 ttl=62 time=6.25 ms	(same route)
+64 bytes from 1.0.0.16: icmp_seq=7 ttl=62 time=6.30 ms	(same route)
+64 bytes from 1.0.0.16: icmp_seq=8 ttl=62 time=11.9 ms	(same route)
+64 bytes from 1.0.0.16: icmp_seq=9 ttl=62 time=6.30 ms	(same route)
+64 bytes from 1.0.0.16: icmp_seq=10 ttl=62 time=6.48 ms	(same route)
+64 bytes from 1.0.0.16: icmp_seq=11 ttl=62 time=7.93 ms	(same route)
+64 bytes from 1.0.0.16: icmp_seq=12 ttl=62 time=6.94 ms	(same route)
+64 bytes from 1.0.0.16: icmp_seq=13 ttl=62 time=7.53 ms	(same route)
+64 bytes from 1.0.0.16: icmp_seq=14 ttl=62 time=7.73 ms	(same route)
+64 bytes from 1.0.0.16: icmp_seq=15 ttl=62 time=6.60 ms	(same route)
+64 bytes from 1.0.0.16: icmp_seq=16 ttl=62 time=11.3 ms	(same route)
+64 bytes from 1.0.0.16: icmp_seq=17 ttl=62 time=9.32 ms	(same route)
+64 bytes from 1.0.0.16: icmp_seq=18 ttl=62 time=7.67 ms	(same route)
+64 bytes from 1.0.0.16: icmp_seq=19 ttl=62 time=6.96 ms	(same route)
+64 bytes from 1.0.0.16: icmp_seq=20 ttl=62 time=11.8 ms	(same route)
+
+--- 1.0.0.16 ping statistics ---
+20 packets transmitted, 20 received, 0% packet loss, time 19016ms
+rtt min/avg/max/mdev = 6.080/7.719/11.913/1.831 ms
+RR: 	1.0.0.16 	1.0.0.13 	1.0.0.30 	1.0.0.11 	1.0.0.11 	1.0.0.30 	1.0.0.13 	1.0.0.16   || 3
+ssh map18 'ping -R -i 1 -c 20 1.0.0.11' >& ping/map18.log
+ssh map11 'ping -R -i 1 -c 20 1.0.0.18'
+PING 1.0.0.18 (1.0.0.18) 56(124) bytes of data.
+64 bytes from 1.0.0.18: icmp_seq=1 ttl=62 time=6.45 ms
+RR: 	1.0.0.11
+	1.0.0.30
+	1.0.0.28
+	1.0.0.18
+	1.0.0.18
+	1.0.0.28
+	1.0.0.30
+	1.0.0.11
+
+64 bytes from 1.0.0.18: icmp_seq=2 ttl=62 time=14.5 ms	(same route)
+64 bytes from 1.0.0.18: icmp_seq=3 ttl=62 time=6.91 ms	(same route)
+64 bytes from 1.0.0.18: icmp_seq=4 ttl=62 time=7.40 ms	(same route)
+64 bytes from 1.0.0.18: icmp_seq=5 ttl=62 time=11.0 ms	(same route)
+64 bytes from 1.0.0.18: icmp_seq=6 ttl=62 time=7.17 ms	(same route)
+64 bytes from 1.0.0.18: icmp_seq=7 ttl=62 time=7.14 ms	(same route)
+64 bytes from 1.0.0.18: icmp_seq=8 ttl=62 time=8.46 ms	(same route)
+64 bytes from 1.0.0.18: icmp_seq=9 ttl=62 time=8.99 ms	(same route)
+64 bytes from 1.0.0.18: icmp_seq=11 ttl=62 time=7.01 ms	(same route)
+64 bytes from 1.0.0.18: icmp_seq=14 ttl=62 time=7.67 ms	(same route)
+64 bytes from 1.0.0.18: icmp_seq=15 ttl=62 time=7.22 ms	(same route)
+64 bytes from 1.0.0.18: icmp_seq=16 ttl=62 time=8.41 ms	(same route)
+64 bytes from 1.0.0.18: icmp_seq=17 ttl=62 time=7.16 ms	(same route)
+64 bytes from 1.0.0.18: icmp_seq=18 ttl=62 time=8.73 ms	(same route)
+64 bytes from 1.0.0.18: icmp_seq=20 ttl=62 time=8.45 ms	(same route)
+
+--- 1.0.0.18 ping statistics ---
+20 packets transmitted, 16 received, 20% packet loss, time 19012ms
+rtt min/avg/max/mdev = 6.451/8.303/14.585/1.952 ms
+RR: 	1.0.0.18 	1.0.0.28 	1.0.0.30 	1.0.0.11 	1.0.0.11 	1.0.0.30 	1.0.0.28 	1.0.0.18  From 1.0.0.28: icmp_seq=2 Redirect Host(New nexthop: 1.0.0.30)  || 3.5
+ssh map19 'ping -R -i 1 -c 20 1.0.0.11' >& ping/map19.log
+ssh map11 'ping -R -i 1 -c 20 1.0.0.19'
+PING 1.0.0.19 (1.0.0.19) 56(124) bytes of data.
+64 bytes from 1.0.0.19: icmp_seq=1 ttl=62 time=33.9 ms
+RR: 	1.0.0.11
+	1.0.0.37
+	1.0.0.4
+	1.0.0.19
+	1.0.0.19
+	1.0.0.4
+	1.0.0.37
+	1.0.0.11
+
+From 1.0.0.37: icmp_seq=2 Redirect Host(New nexthop: 1.0.0.4)
+64 bytes from 1.0.0.19: icmp_seq=2 ttl=62 time=11.7 ms	(same route)
+64 bytes from 1.0.0.19: icmp_seq=3 ttl=62 time=14.6 ms	(same route)
+64 bytes from 1.0.0.19: icmp_seq=4 ttl=62 time=20.8 ms	(same route)
+64 bytes from 1.0.0.19: icmp_seq=4 ttl=62 time=47.3 ms (DUP!)	(same route)
+64 bytes from 1.0.0.19: icmp_seq=5 ttl=62 time=10.4 ms	(same route)
+64 bytes from 1.0.0.19: icmp_seq=11 ttl=62 time=17.2 ms	(same route)
+64 bytes from 1.0.0.19: icmp_seq=14 ttl=62 time=19.8 ms	(same route)
+64 bytes from 1.0.0.19: icmp_seq=15 ttl=62 time=12.1 ms	(same route)
+64 bytes from 1.0.0.19: icmp_seq=16 ttl=62 time=20.1 ms	(same route)
+64 bytes from 1.0.0.19: icmp_seq=20 ttl=62 time=11.8 ms	(same route)
+64 bytes from 1.0.0.19: icmp_seq=20 ttl=62 time=30.6 ms (DUP!)	(same route)
+
+--- 1.0.0.19 ping statistics ---
+20 packets transmitted, 10 received, +2 duplicates, 50% packet loss, time 19006ms
+rtt min/avg/max/mdev = 10.487/20.906/47.315/10.668 ms
+RR: 	1.0.0.19 	1.0.0.4 	1.0.0.37 	1.0.0.11 	1.0.0.11 	1.0.0.37 	1.0.0.4 	1.0.0.19   || 3
+ssh map22 'ping -R -i 1 -c 20 1.0.0.11' >& ping/map22.log
+ssh map11 'ping -R -i 1 -c 20 1.0.0.22'
+PING 1.0.0.22 (1.0.0.22) 56(124) bytes of data.
+64 bytes from 1.0.0.22: icmp_seq=1 ttl=64 time=2.20 ms
+RR: 	1.0.0.11
+	1.0.0.22
+	1.0.0.22
+	1.0.0.11
+
+64 bytes from 1.0.0.22: icmp_seq=2 ttl=64 time=2.75 ms	(same route)
+64 bytes from 1.0.0.22: icmp_seq=3 ttl=64 time=2.37 ms	(same route)
+64 bytes from 1.0.0.22: icmp_seq=4 ttl=64 time=2.38 ms	(same route)
+64 bytes from 1.0.0.22: icmp_seq=5 ttl=64 time=2.67 ms	(same route)
+64 bytes from 1.0.0.22: icmp_seq=6 ttl=64 time=2.78 ms	(same route)
+64 bytes from 1.0.0.22: icmp_seq=7 ttl=64 time=3.84 ms	(same route)
+64 bytes from 1.0.0.22: icmp_seq=8 ttl=64 time=2.83 ms	(same route)
+64 bytes from 1.0.0.22: icmp_seq=9 ttl=64 time=2.65 ms	(same route)
+64 bytes from 1.0.0.22: icmp_seq=10 ttl=64 time=2.53 ms	(same route)
+64 bytes from 1.0.0.22: icmp_seq=11 ttl=64 time=2.95 ms	(same route)
+64 bytes from 1.0.0.22: icmp_seq=12 ttl=64 time=1.35 ms	(same route)
+64 bytes from 1.0.0.22: icmp_seq=13 ttl=64 time=2.56 ms	(same route)
+64 bytes from 1.0.0.22: icmp_seq=14 ttl=64 time=3.57 ms	(same route)
+64 bytes from 1.0.0.22: icmp_seq=15 ttl=64 time=2.97 ms	(same route)
+64 bytes from 1.0.0.22: icmp_seq=16 ttl=64 time=2.70 ms	(same route)
+64 bytes from 1.0.0.22: icmp_seq=17 ttl=64 time=2.79 ms	(same route)
+64 bytes from 1.0.0.22: icmp_seq=18 ttl=64 time=2.81 ms	(same route)
+64 bytes from 1.0.0.22: icmp_seq=19 ttl=64 time=2.67 ms	(same route)
+64 bytes from 1.0.0.22: icmp_seq=20 ttl=64 time=2.81 ms	(same route)
+
+--- 1.0.0.22 ping statistics ---
+20 packets transmitted, 20 received, 0% packet loss, time 19016ms
+rtt min/avg/max/mdev = 1.357/2.712/3.849/0.479 ms
+RR: 	1.0.0.22 	1.0.0.11 	1.0.0.11 	1.0.0.22   || 1
+ssh map25 'ping -R -i 1 -c 20 1.0.0.11' >& ping/map25.log
+ssh map11 'ping -R -i 1 -c 20 1.0.0.25'
+PING 1.0.0.25 (1.0.0.25) 56(124) bytes of data.
+64 bytes from 1.0.0.25: icmp_seq=1 ttl=61 time=8.42 ms
+RR: 	1.0.0.11
+	1.0.0.30
+	1.0.0.13
+	1.0.0.1
+	1.0.0.25
+	1.0.0.25
+	1.0.0.1
+	1.0.0.13
+	1.0.0.30
+
+64 bytes from 1.0.0.25: icmp_seq=2 ttl=61 time=8.59 ms	(same route)
+64 bytes from 1.0.0.25: icmp_seq=3 ttl=61 time=7.33 ms	(same route)
+64 bytes from 1.0.0.25: icmp_seq=4 ttl=61 time=7.93 ms	(same route)
+64 bytes from 1.0.0.25: icmp_seq=5 ttl=61 time=11.3 ms	(same route)
+64 bytes from 1.0.0.25: icmp_seq=6 ttl=61 time=8.62 ms	(same route)
+64 bytes from 1.0.0.25: icmp_seq=7 ttl=61 time=9.15 ms	(same route)
+64 bytes from 1.0.0.25: icmp_seq=8 ttl=61 time=14.1 ms	(same route)
+64 bytes from 1.0.0.25: icmp_seq=9 ttl=61 time=8.88 ms	(same route)
+64 bytes from 1.0.0.25: icmp_seq=10 ttl=61 time=8.14 ms	(same route)
+64 bytes from 1.0.0.25: icmp_seq=11 ttl=61 time=7.37 ms	(same route)
+64 bytes from 1.0.0.25: icmp_seq=12 ttl=61 time=7.83 ms	(same route)
+64 bytes from 1.0.0.25: icmp_seq=13 ttl=61 time=8.77 ms	(same route)
+64 bytes from 1.0.0.25: icmp_seq=14 ttl=61 time=17.3 ms	(same route)
+64 bytes from 1.0.0.25: icmp_seq=15 ttl=61 time=8.61 ms	(same route)
+64 bytes from 1.0.0.25: icmp_seq=16 ttl=61 time=10.1 ms	(same route)
+64 bytes from 1.0.0.25: icmp_seq=18 ttl=61 time=10.0 ms	(same route)
+64 bytes from 1.0.0.25: icmp_seq=19 ttl=61 time=9.35 ms	(same route)
+64 bytes from 1.0.0.25: icmp_seq=20 ttl=61 time=9.11 ms	(same route)
+
+--- 1.0.0.25 ping statistics ---
+20 packets transmitted, 19 received, 5% packet loss, time 19016ms
+rtt min/avg/max/mdev = 7.335/9.538/17.365/2.396 ms
+RR: 	1.0.0.25 	1.0.0.1 	1.0.0.13 	1.0.0.30 	1.0.0.11 	1.0.0.11 	1.0.0.30 	1.0.0.13 	1.0.0.1  From 1.0.0.1: icmp_seq=2 Redirect Host(New nexthop: 1.0.0.13)  || 4
+ssh map27 'ping -R -i 1 -c 20 1.0.0.11' >& ping/map27.log
+ssh map11 'ping -R -i 1 -c 20 1.0.0.27'
+PING 1.0.0.27 (1.0.0.27) 56(124) bytes of data.
+64 bytes from 1.0.0.27: icmp_seq=1 ttl=63 time=4.65 ms
+RR: 	1.0.0.11
+	1.0.0.34
+	1.0.0.27
+	1.0.0.27
+	1.0.0.34
+	1.0.0.11
+
+64 bytes from 1.0.0.27: icmp_seq=2 ttl=63 time=3.94 ms	(same route)
+64 bytes from 1.0.0.27: icmp_seq=3 ttl=63 time=4.46 ms	(same route)
+64 bytes from 1.0.0.27: icmp_seq=4 ttl=63 time=4.90 ms	(same route)
+64 bytes from 1.0.0.27: icmp_seq=5 ttl=63 time=4.78 ms	(same route)
+64 bytes from 1.0.0.27: icmp_seq=6 ttl=63 time=6.83 ms	(same route)
+64 bytes from 1.0.0.27: icmp_seq=7 ttl=63 time=5.44 ms	(same route)
+64 bytes from 1.0.0.27: icmp_seq=8 ttl=63 time=7.55 ms	(same route)
+64 bytes from 1.0.0.27: icmp_seq=9 ttl=63 time=4.28 ms	(same route)
+64 bytes from 1.0.0.27: icmp_seq=10 ttl=63 time=4.28 ms	(same route)
+64 bytes from 1.0.0.27: icmp_seq=11 ttl=63 time=6.14 ms	(same route)
+64 bytes from 1.0.0.27: icmp_seq=12 ttl=63 time=4.52 ms	(same route)
+64 bytes from 1.0.0.27: icmp_seq=13 ttl=63 time=6.05 ms	(same route)
+64 bytes from 1.0.0.27: icmp_seq=14 ttl=63 time=8.10 ms	(same route)
+64 bytes from 1.0.0.27: icmp_seq=15 ttl=63 time=5.88 ms	(same route)
+64 bytes from 1.0.0.27: icmp_seq=16 ttl=63 time=5.01 ms	(same route)
+64 bytes from 1.0.0.27: icmp_seq=17 ttl=63 time=7.17 ms	(same route)
+64 bytes from 1.0.0.27: icmp_seq=18 ttl=63 time=4.99 ms	(same route)
+64 bytes from 1.0.0.27: icmp_seq=19 ttl=63 time=4.54 ms	(same route)
+64 bytes from 1.0.0.27: icmp_seq=20 ttl=63 time=4.92 ms	(same route)
+
+--- 1.0.0.27 ping statistics ---
+20 packets transmitted, 20 received, 0% packet loss, time 19015ms
+rtt min/avg/max/mdev = 3.946/5.426/8.107/1.165 ms
+RR: 	1.0.0.27 	1.0.0.34 	1.0.0.11 	1.0.0.11 	1.0.0.34 	1.0.0.27  From 1.0.0.34: icmp_seq=2 Redirect Host(New nexthop: 1.0.0.11)  || 2.5
+ssh map28 'ping -R -i 1 -c 20 1.0.0.11' >& ping/map28.log
+ssh map11 'ping -R -i 1 -c 20 1.0.0.28'
+PING 1.0.0.28 (1.0.0.28) 56(124) bytes of data.
+64 bytes from 1.0.0.28: icmp_seq=1 ttl=63 time=4.72 ms
+RR: 	1.0.0.11
+	1.0.0.30
+	1.0.0.28
+	1.0.0.28
+	1.0.0.30
+	1.0.0.11
+
+64 bytes from 1.0.0.28: icmp_seq=2 ttl=63 time=6.73 ms	(same route)
+64 bytes from 1.0.0.28: icmp_seq=3 ttl=63 time=4.43 ms	(same route)
+64 bytes from 1.0.0.28: icmp_seq=4 ttl=63 time=4.15 ms	(same route)
+64 bytes from 1.0.0.28: icmp_seq=5 ttl=63 time=4.03 ms	(same route)
+64 bytes from 1.0.0.28: icmp_seq=6 ttl=63 time=5.50 ms	(same route)
+64 bytes from 1.0.0.28: icmp_seq=7 ttl=63 time=5.55 ms	(same route)
+64 bytes from 1.0.0.28: icmp_seq=8 ttl=63 time=4.95 ms	(same route)
+64 bytes from 1.0.0.28: icmp_seq=10 ttl=63 time=5.01 ms	(same route)
+64 bytes from 1.0.0.28: icmp_seq=11 ttl=63 time=3.94 ms	(same route)
+64 bytes from 1.0.0.28: icmp_seq=12 ttl=63 time=4.68 ms	(same route)
+64 bytes from 1.0.0.28: icmp_seq=13 ttl=63 time=4.40 ms	(same route)
+64 bytes from 1.0.0.28: icmp_seq=14 ttl=63 time=4.31 ms	(same route)
+64 bytes from 1.0.0.28: icmp_seq=15 ttl=63 time=4.86 ms	(same route)
+64 bytes from 1.0.0.28: icmp_seq=16 ttl=63 time=4.21 ms	(same route)
+64 bytes from 1.0.0.28: icmp_seq=17 ttl=63 time=4.34 ms	(same route)
+64 bytes from 1.0.0.28: icmp_seq=18 ttl=63 time=4.39 ms	(same route)
+64 bytes from 1.0.0.28: icmp_seq=19 ttl=63 time=4.02 ms	(same route)
+64 bytes from 1.0.0.28: icmp_seq=20 ttl=63 time=4.71 ms	(same route)
+
+--- 1.0.0.28 ping statistics ---
+20 packets transmitted, 19 received, 5% packet loss, time 19015ms
+rtt min/avg/max/mdev = 3.945/4.684/6.738/0.663 ms
+RR: 	1.0.0.28 	1.0.0.30 	1.0.0.11 	1.0.0.11 	1.0.0.30 	1.0.0.28  From 1.0.0.30: icmp_seq=2 Redirect Host(New nexthop: 1.0.0.11)  || 2.5
+ssh map29 'ping -R -i 1 -c 20 1.0.0.11' >& ping/map29.log
+ssh map11 'ping -R -i 1 -c 20 1.0.0.29'
+PING 1.0.0.29 (1.0.0.29) 56(124) bytes of data.
+64 bytes from 1.0.0.29: icmp_seq=1 ttl=63 time=4.13 ms
+RR: 	1.0.0.11
+	1.0.0.30
+	1.0.0.29
+	1.0.0.29
+	1.0.0.30
+	1.0.0.11
+
+64 bytes from 1.0.0.29: icmp_seq=2 ttl=63 time=4.90 ms	(same route)
+64 bytes from 1.0.0.29: icmp_seq=3 ttl=63 time=4.30 ms	(same route)
+64 bytes from 1.0.0.29: icmp_seq=4 ttl=63 time=5.04 ms	(same route)
+64 bytes from 1.0.0.29: icmp_seq=5 ttl=63 time=4.50 ms	(same route)
+64 bytes from 1.0.0.29: icmp_seq=6 ttl=63 time=4.55 ms	(same route)
+64 bytes from 1.0.0.29: icmp_seq=7 ttl=63 time=3.38 ms	(same route)
+64 bytes from 1.0.0.29: icmp_seq=8 ttl=63 time=6.06 ms	(same route)
+64 bytes from 1.0.0.29: icmp_seq=9 ttl=63 time=3.94 ms	(same route)
+64 bytes from 1.0.0.29: icmp_seq=10 ttl=63 time=6.00 ms	(same route)
+64 bytes from 1.0.0.29: icmp_seq=11 ttl=63 time=4.08 ms	(same route)
+64 bytes from 1.0.0.29: icmp_seq=12 ttl=63 time=5.02 ms	(same route)
+64 bytes from 1.0.0.29: icmp_seq=13 ttl=63 time=4.30 ms	(same route)
+64 bytes from 1.0.0.29: icmp_seq=14 ttl=63 time=4.72 ms	(same route)
+64 bytes from 1.0.0.29: icmp_seq=15 ttl=63 time=3.76 ms	(same route)
+64 bytes from 1.0.0.29: icmp_seq=16 ttl=63 time=4.20 ms	(same route)
+64 bytes from 1.0.0.29: icmp_seq=17 ttl=63 time=5.93 ms	(same route)
+64 bytes from 1.0.0.29: icmp_seq=18 ttl=63 time=3.19 ms	(same route)
+64 bytes from 1.0.0.29: icmp_seq=19 ttl=63 time=6.75 ms	(same route)
+64 bytes from 1.0.0.29: icmp_seq=20 ttl=63 time=4.44 ms	(same route)
+
+--- 1.0.0.29 ping statistics ---
+20 packets transmitted, 20 received, 0% packet loss, time 19016ms
+rtt min/avg/max/mdev = 3.198/4.663/6.753/0.905 ms
+RR: 	1.0.0.29 	1.0.0.30 	1.0.0.11 	1.0.0.11 	1.0.0.30 	1.0.0.29  From 1.0.0.30: icmp_seq=2 Redirect Host(New nexthop: 1.0.0.11)  || 2.5
+ssh map30 'ping -R -i 1 -c 20 1.0.0.11' >& ping/map30.log
+ssh map11 'ping -R -i 1 -c 20 1.0.0.30'
+PING 1.0.0.30 (1.0.0.30) 56(124) bytes of data.
+64 bytes from 1.0.0.30: icmp_seq=1 ttl=64 time=2.40 ms
+RR: 	1.0.0.11
+	1.0.0.30
+	1.0.0.30
+	1.0.0.11
+
+64 bytes from 1.0.0.30: icmp_seq=2 ttl=64 time=2.34 ms	(same route)
+64 bytes from 1.0.0.30: icmp_seq=3 ttl=64 time=2.85 ms	(same route)
+64 bytes from 1.0.0.30: icmp_seq=4 ttl=64 time=2.39 ms	(same route)
+64 bytes from 1.0.0.30: icmp_seq=5 ttl=64 time=2.39 ms	(same route)
+64 bytes from 1.0.0.30: icmp_seq=6 ttl=64 time=3.17 ms	(same route)
+64 bytes from 1.0.0.30: icmp_seq=7 ttl=64 time=3.42 ms	(same route)
+64 bytes from 1.0.0.30: icmp_seq=8 ttl=64 time=3.06 ms	(same route)
+64 bytes from 1.0.0.30: icmp_seq=9 ttl=64 time=2.82 ms	(same route)
+64 bytes from 1.0.0.30: icmp_seq=10 ttl=64 time=2.99 ms	(same route)
+64 bytes from 1.0.0.30: icmp_seq=11 ttl=64 time=1.21 ms	(same route)
+64 bytes from 1.0.0.30: icmp_seq=12 ttl=64 time=2.30 ms	(same route)
+64 bytes from 1.0.0.30: icmp_seq=13 ttl=64 time=3.00 ms	(same route)
+64 bytes from 1.0.0.30: icmp_seq=14 ttl=64 time=2.50 ms	(same route)
+64 bytes from 1.0.0.30: icmp_seq=15 ttl=64 time=2.95 ms	(same route)
+64 bytes from 1.0.0.30: icmp_seq=16 ttl=64 time=3.08 ms	(same route)
+64 bytes from 1.0.0.30: icmp_seq=17 ttl=64 time=5.95 ms	(same route)
+64 bytes from 1.0.0.30: icmp_seq=18 ttl=64 time=2.75 ms	(same route)
+64 bytes from 1.0.0.30: icmp_seq=19 ttl=64 time=3.78 ms	(same route)
+64 bytes from 1.0.0.30: icmp_seq=20 ttl=64 time=2.53 ms	(same route)
+
+--- 1.0.0.30 ping statistics ---
+20 packets transmitted, 20 received, 0% packet loss, time 19016ms
+rtt min/avg/max/mdev = 1.210/2.898/5.951/0.871 ms
+RR: 	1.0.0.30 	1.0.0.11 	1.0.0.11 	1.0.0.30   || 1
+ssh map34 'ping -R -i 1 -c 20 1.0.0.11' >& ping/map34.log
+ssh map11 'ping -R -i 1 -c 20 1.0.0.34'
+PING 1.0.0.34 (1.0.0.34) 56(124) bytes of data.
+64 bytes from 1.0.0.34: icmp_seq=1 ttl=64 time=2.76 ms
+RR: 	1.0.0.11
+	1.0.0.34
+	1.0.0.34
+	1.0.0.11
+
+64 bytes from 1.0.0.34: icmp_seq=2 ttl=64 time=2.56 ms	(same route)
+64 bytes from 1.0.0.34: icmp_seq=3 ttl=64 time=10.9 ms	(same route)
+64 bytes from 1.0.0.34: icmp_seq=4 ttl=64 time=7.91 ms	(same route)
+64 bytes from 1.0.0.34: icmp_seq=5 ttl=64 time=2.63 ms	(same route)
+64 bytes from 1.0.0.34: icmp_seq=6 ttl=64 time=3.11 ms	(same route)
+64 bytes from 1.0.0.34: icmp_seq=7 ttl=64 time=2.77 ms	(same route)
+64 bytes from 1.0.0.34: icmp_seq=8 ttl=64 time=3.40 ms	(same route)
+64 bytes from 1.0.0.34: icmp_seq=9 ttl=64 time=2.73 ms	(same route)
+64 bytes from 1.0.0.34: icmp_seq=10 ttl=64 time=2.32 ms	(same route)
+64 bytes from 1.0.0.34: icmp_seq=11 ttl=64 time=2.87 ms	(same route)
+64 bytes from 1.0.0.34: icmp_seq=12 ttl=64 time=2.72 ms	(same route)
+64 bytes from 1.0.0.34: icmp_seq=13 ttl=64 time=8.86 ms	(same route)
+64 bytes from 1.0.0.34: icmp_seq=14 ttl=64 time=2.39 ms	(same route)
+64 bytes from 1.0.0.34: icmp_seq=15 ttl=64 time=2.73 ms	(same route)
+64 bytes from 1.0.0.34: icmp_seq=16 ttl=64 time=2.59 ms	(same route)
+64 bytes from 1.0.0.34: icmp_seq=17 ttl=64 time=2.87 ms	(same route)
+64 bytes from 1.0.0.34: icmp_seq=18 ttl=64 time=2.49 ms	(same route)
+64 bytes from 1.0.0.34: icmp_seq=19 ttl=64 time=2.59 ms	(same route)
+64 bytes from 1.0.0.34: icmp_seq=20 ttl=64 time=2.87 ms	(same route)
+
+--- 1.0.0.34 ping statistics ---
+20 packets transmitted, 20 received, 0% packet loss, time 19016ms
+rtt min/avg/max/mdev = 2.320/3.710/10.958/2.389 ms
+RR: 	1.0.0.34 	1.0.0.11 	1.0.0.11 	1.0.0.34   || 1
+ssh map37 'ping -R -i 1 -c 20 1.0.0.11' >& ping/map37.log
+ssh map11 'ping -R -i 1 -c 20 1.0.0.37'
+PING 1.0.0.37 (1.0.0.37) 56(124) bytes of data.
+64 bytes from 1.0.0.37: icmp_seq=1 ttl=64 time=12.3 ms
+RR: 	1.0.0.11
+	1.0.0.37
+	1.0.0.37
+	1.0.0.11
+
+64 bytes from 1.0.0.37: icmp_seq=3 ttl=64 time=17.4 ms	(same route)
+64 bytes from 1.0.0.37: icmp_seq=5 ttl=64 time=3.71 ms	(same route)
+64 bytes from 1.0.0.37: icmp_seq=6 ttl=64 time=4.03 ms	(same route)
+64 bytes from 1.0.0.37: icmp_seq=7 ttl=64 time=24.7 ms	(same route)
+64 bytes from 1.0.0.37: icmp_seq=12 ttl=64 time=8.39 ms	(same route)
+64 bytes from 1.0.0.37: icmp_seq=13 ttl=64 time=17.6 ms	(same route)
+64 bytes from 1.0.0.37: icmp_seq=14 ttl=64 time=3.41 ms	(same route)
+64 bytes from 1.0.0.37: icmp_seq=15 ttl=64 time=15.4 ms	(same route)
+64 bytes from 1.0.0.37: icmp_seq=17 ttl=64 time=12.8 ms	(same route)
+64 bytes from 1.0.0.37: icmp_seq=20 ttl=64 time=3.72 ms	(same route)
+
+--- 1.0.0.37 ping statistics ---
+20 packets transmitted, 11 received, 45% packet loss, time 19007ms
+rtt min/avg/max/mdev = 3.414/11.256/24.770/6.871 ms
+RR: 	1.0.0.37 	1.0.0.11 	1.0.0.11 	1.0.0.37   || 1
+ssh map38 'ping -R -i 1 -c 20 1.0.0.11' >& ping/map38.log
+ssh map11 'ping -R -i 1 -c 20 1.0.0.38'
+PING 1.0.0.38 (1.0.0.38) 56(124) bytes of data.
+64 bytes from 1.0.0.38: icmp_seq=1 ttl=61 time=8.04 ms
+RR: 	1.0.0.11
+	1.0.0.30
+	1.0.0.13
+	1.0.0.16
+	1.0.0.38
+	1.0.0.38
+	1.0.0.16
+	1.0.0.13
+	1.0.0.30
+
+From 1.0.0.30: icmp_seq=3 Redirect Host(New nexthop: 1.0.0.13)
+64 bytes from 1.0.0.38: icmp_seq=3 ttl=61 time=8.82 ms	(same route)
+64 bytes from 1.0.0.38: icmp_seq=4 ttl=61 time=8.73 ms	(same route)
+64 bytes from 1.0.0.38: icmp_seq=5 ttl=61 time=8.55 ms	(same route)
+64 bytes from 1.0.0.38: icmp_seq=6 ttl=61 time=11.2 ms	(same route)
+64 bytes from 1.0.0.38: icmp_seq=7 ttl=61 time=9.67 ms	(same route)
+64 bytes from 1.0.0.38: icmp_seq=9 ttl=61 time=9.77 ms	(same route)
+64 bytes from 1.0.0.38: icmp_seq=10 ttl=61 time=9.21 ms	(same route)
+64 bytes from 1.0.0.38: icmp_seq=11 ttl=61 time=9.06 ms	(same route)
+64 bytes from 1.0.0.38: icmp_seq=12 ttl=61 time=7.70 ms	(same route)
+64 bytes from 1.0.0.38: icmp_seq=13 ttl=61 time=14.2 ms	(same route)
+64 bytes from 1.0.0.38: icmp_seq=14 ttl=61 time=7.50 ms	(same route)
+64 bytes from 1.0.0.38: icmp_seq=15 ttl=61 time=8.69 ms	(same route)
+64 bytes from 1.0.0.38: icmp_seq=16 ttl=61 time=6.82 ms	(same route)
+64 bytes from 1.0.0.38: icmp_seq=17 ttl=61 time=7.77 ms	(same route)
+64 bytes from 1.0.0.38: icmp_seq=18 ttl=61 time=9.72 ms	(same route)
+64 bytes from 1.0.0.38: icmp_seq=19 ttl=61 time=7.42 ms	(same route)
+64 bytes from 1.0.0.38: icmp_seq=20 ttl=61 time=9.67 ms	(same route)
+
+--- 1.0.0.38 ping statistics ---
+20 packets transmitted, 18 received, 10% packet loss, time 19014ms
+rtt min/avg/max/mdev = 6.829/9.035/14.221/1.638 ms
+RR: 	1.0.0.38 	1.0.0.16 	1.0.0.13 	1.0.0.30 	1.0.0.11 	1.0.0.11 	1.0.0.30 	1.0.0.13 	1.0.0.16   || 3.5

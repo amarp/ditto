@@ -1,0 +1,244 @@
+ssh map1 "/sbin/ifconfig | grep '1\.0\.0' | awk '{print $2}'"
+map1           inet addr:1.0.0.1  Bcast:1.0.0.255  Mask:255.255.255.0 1.0.0.1
+ssh map2 "/sbin/ifconfig | grep '1\.0\.0' | awk '{print $2}'"
+map2           inet addr:1.0.0.2  Bcast:1.0.0.255  Mask:255.255.255.0 1.0.0.2
+ssh map3 "/sbin/ifconfig | grep '1\.0\.0' | awk '{print $2}'"
+map3           inet addr:1.0.0.3  Bcast:1.0.0.255  Mask:255.255.255.0 1.0.0.3
+ssh map4 "/sbin/ifconfig | grep '1\.0\.0' | awk '{print $2}'"
+map4           inet addr:1.0.0.4  Bcast:1.0.0.255  Mask:255.255.255.0 1.0.0.4
+ssh map5 "/sbin/ifconfig | grep '1\.0\.0' | awk '{print $2}'"
+map5           inet addr:1.0.0.5  Bcast:1.0.0.255  Mask:255.255.255.0 1.0.0.5
+ssh map7 "/sbin/ifconfig | grep '1\.0\.0' | awk '{print $2}'"
+map7           inet addr:1.0.0.7  Bcast:1.0.0.255  Mask:255.255.255.0 1.0.0.7
+ssh map11 "/sbin/ifconfig | grep '1\.0\.0' | awk '{print $2}'"
+map11           inet addr:1.0.0.11  Bcast:1.0.0.255  Mask:255.255.255.0 1.0.0.11
+ssh map12 "/sbin/ifconfig | grep '1\.0\.0' | awk '{print $2}'"
+map12           inet addr:1.0.0.12  Bcast:1.0.0.255  Mask:255.255.255.0 1.0.0.12
+ssh map13 "/sbin/ifconfig | grep '1\.0\.0' | awk '{print $2}'"
+map13           inet addr:1.0.0.13  Bcast:1.0.0.255  Mask:255.255.255.0 1.0.0.13
+ssh map14 "/sbin/ifconfig | grep '1\.0\.0' | awk '{print $2}'"
+map14           inet addr:1.0.0.14  Bcast:1.0.0.255  Mask:255.255.255.0 1.0.0.14
+ssh map15 "/sbin/ifconfig | grep '1\.0\.0' | awk '{print $2}'"
+map15           inet addr:1.0.0.15  Bcast:1.0.0.255  Mask:255.255.255.0 1.0.0.15
+ssh map16 "/sbin/ifconfig | grep '1\.0\.0' | awk '{print $2}'"
+map16           inet addr:1.0.0.16  Bcast:1.0.0.255  Mask:255.255.255.0 1.0.0.16
+ssh map18 "/sbin/ifconfig | grep '1\.0\.0' | awk '{print $2}'"
+map18           inet addr:1.0.0.18  Bcast:1.0.0.255  Mask:255.255.255.0 1.0.0.18
+ssh map19 "/sbin/ifconfig | grep '1\.0\.0' | awk '{print $2}'"
+map19           inet addr:1.0.0.19  Bcast:1.0.0.255  Mask:255.255.255.0 1.0.0.19
+ssh map22 "/sbin/ifconfig | grep '1\.0\.0' | awk '{print $2}'"
+map22           inet addr:1.0.0.22  Bcast:1.0.0.255  Mask:255.255.255.0 1.0.0.22
+ssh map25 "/sbin/ifconfig | grep '1\.0\.0' | awk '{print $2}'"
+map25           inet addr:1.0.0.25  Bcast:1.0.0.255  Mask:255.255.255.0 1.0.0.25
+ssh map27 "/sbin/ifconfig | grep '1\.0\.0' | awk '{print $2}'"
+map27           inet addr:1.0.0.27  Bcast:1.0.0.255  Mask:255.255.255.0 1.0.0.27
+ssh map28 "/sbin/ifconfig | grep '1\.0\.0' | awk '{print $2}'"
+map28           inet addr:1.0.0.28  Bcast:1.0.0.255  Mask:255.255.255.0 1.0.0.28
+ssh map29 "/sbin/ifconfig | grep '1\.0\.0' | awk '{print $2}'"
+map29           inet addr:1.0.0.29  Bcast:1.0.0.255  Mask:255.255.255.0 1.0.0.29
+ssh map30 "/sbin/ifconfig | grep '1\.0\.0' | awk '{print $2}'"
+map30           inet addr:1.0.0.30  Bcast:1.0.0.255  Mask:255.255.255.0 1.0.0.30
+ssh map31 "/sbin/ifconfig | grep '1\.0\.0' | awk '{print $2}'"
+map31           inet addr:1.0.0.31  Bcast:1.0.0.255  Mask:255.255.255.0 1.0.0.31
+ssh map34 "/sbin/ifconfig | grep '1\.0\.0' | awk '{print $2}'"
+map34           inet addr:1.0.0.34  Bcast:1.0.0.255  Mask:255.255.255.0 1.0.0.34
+ssh map37 "/sbin/ifconfig | grep '1\.0\.0' | awk '{print $2}'"
+map37           inet addr:1.0.0.37  Bcast:1.0.0.255  Mask:255.255.255.0 1.0.0.37
+ssh map38 "/sbin/ifconfig | grep '1\.0\.0' | awk '{print $2}'"
+map38           inet addr:1.0.0.38  Bcast:1.0.0.255  Mask:255.255.255.0 1.0.0.38
+Rebooting testbed
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo cardctl eject && sudo modprobe -r ath_pci'"
+Exec:  ssh map1 'sudo cardctl eject && sudo modprobe -r ath_pci'
+Exec:  ssh map2 'sudo cardctl eject && sudo modprobe -r ath_pci'
+Exec:  ssh map3 'sudo cardctl eject && sudo modprobe -r ath_pci'
+Exec:  ssh map4 'sudo cardctl eject && sudo modprobe -r ath_pci'
+Exec:  ssh map5 'sudo cardctl eject && sudo modprobe -r ath_pci'
+Exec:  ssh map7 'sudo cardctl eject && sudo modprobe -r ath_pci'
+Exec:  ssh map11 'sudo cardctl eject && sudo modprobe -r ath_pci'
+Exec:  ssh map12 'sudo cardctl eject && sudo modprobe -r ath_pci'
+Exec:  ssh map13 'sudo cardctl eject && sudo modprobe -r ath_pci'
+Exec:  ssh map14 'sudo cardctl eject && sudo modprobe -r ath_pci'
+Exec:  ssh map15 'sudo cardctl eject && sudo modprobe -r ath_pci'
+Exec:  ssh map16 'sudo cardctl eject && sudo modprobe -r ath_pci'
+Exec:  ssh map19 'sudo cardctl eject && sudo modprobe -r ath_pci'
+Exec:  ssh map22 'sudo cardctl eject && sudo modprobe -r ath_pci'
+Exec:  ssh map25 'sudo cardctl eject && sudo modprobe -r ath_pci'
+Exec:  ssh map27 'sudo cardctl eject && sudo modprobe -r ath_pci'
+Exec:  ssh map28 'sudo cardctl eject && sudo modprobe -r ath_pci'
+Exec:  ssh map29 'sudo cardctl eject && sudo modprobe -r ath_pci'
+Exec:  ssh map18 'sudo cardctl eject && sudo modprobe -r ath_pci'
+Exec:  ssh map30 'sudo cardctl eject && sudo modprobe -r ath_pci'
+Exec:  ssh map31 'sudo cardctl eject && sudo modprobe -r ath_pci'
+Exec:  ssh map34 'sudo cardctl eject && sudo modprobe -r ath_pci'
+Exec:  ssh map37 'sudo cardctl eject && sudo modprobe -r ath_pci'
+Exec:  ssh map38 'sudo cardctl eject && sudo modprobe -r ath_pci'
+Killed by signal 2.
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo cardctl insert && sudo modprobe ath_pci'"
+Exec:  ssh map1 'sudo cardctl insert && sudo modprobe ath_pci'
+Exec:  ssh map2 'sudo cardctl insert && sudo modprobe ath_pci'
+Exec:  ssh map3 'sudo cardctl insert && sudo modprobe ath_pci'
+Exec:  ssh map4 'sudo cardctl insert && sudo modprobe ath_pci'
+Exec:  ssh map5 'sudo cardctl insert && sudo modprobe ath_pci'
+Exec:  ssh map7 'sudo cardctl insert && sudo modprobe ath_pci'
+Exec:  ssh map11 'sudo cardctl insert && sudo modprobe ath_pci'
+Exec:  ssh map12 'sudo cardctl insert && sudo modprobe ath_pci'
+Exec:  ssh map13 'sudo cardctl insert && sudo modprobe ath_pci'
+Exec:  ssh map14 'sudo cardctl insert && sudo modprobe ath_pci'
+Exec:  ssh map15 'sudo cardctl insert && sudo modprobe ath_pci'
+Exec:  ssh map16 'sudo cardctl insert && sudo modprobe ath_pci'
+Exec:  ssh map19 'sudo cardctl insert && sudo modprobe ath_pci'
+Exec:  ssh map22 'sudo cardctl insert && sudo modprobe ath_pci'
+Exec:  ssh map25 'sudo cardctl insert && sudo modprobe ath_pci'
+Exec:  ssh map27 'sudo cardctl insert && sudo modprobe ath_pci'
+Exec:  ssh map28 'sudo cardctl insert && sudo modprobe ath_pci'
+Exec:  ssh map29 'sudo cardctl insert && sudo modprobe ath_pci'
+Exec:  ssh map30 'sudo cardctl insert && sudo modprobe ath_pci'
+Exec:  ssh map31 'sudo cardctl insert && sudo modprobe ath_pci'
+Exec:  ssh map34 'sudo cardctl insert && sudo modprobe ath_pci'
+Exec:  ssh map37 'sudo cardctl insert && sudo modprobe ath_pci'
+Exec:  ssh map38 'sudo cardctl insert && sudo modprobe ath_pci'
+Exec:  ssh map18 'sudo cardctl insert && sudo modprobe ath_pci'
+Killed by signal 2.
+Killed by signal 2.
+Killed by signal 2.
+Killed by signal 2.
+Killed by signal 2.
+Killed by signal 2.
+Killed by signal 2.
+Killed by signal 2.
+Killed by signal 2.
+Killed by signal 2.
+Killed by signal 2.
+Killed by signal 2.
+Killed by signal 2.
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo /map/startwlan'"
+Exec:  ssh map1 'sudo /map/startwlan'
+Exec:  ssh map2 'sudo /map/startwlan'
+Exec:  ssh map3 'sudo /map/startwlan'
+Exec:  ssh map4 'sudo /map/startwlan'
+Exec:  ssh map5 'sudo /map/startwlan'
+Exec:  ssh map7 'sudo /map/startwlan'
+Exec:  ssh map11 'sudo /map/startwlan'
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo /map/startoldath'"
+Exec:  ssh map1 'sudo /map/startoldath'
+Exec:  ssh map2 'sudo /map/startoldath'
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo iwconfig wlan0 rate auto'"
+Exec:  ssh map1 'sudo iwconfig wlan0 rate auto'
+Exec:  ssh map2 'sudo iwconfig wlan0 rate auto'
+Exec:  ssh map3 'sudo iwconfig wlan0 rate auto'
+Exec:  ssh map4 'sudo iwconfig wlan0 rate auto'
+Exec:  ssh map5 'sudo iwconfig wlan0 rate auto'
+Exec:  ssh map7 'sudo iwconfig wlan0 rate auto'
+Exec:  ssh map11 'sudo iwconfig wlan0 rate auto'
+Exec:  ssh map12 'sudo iwconfig wlan0 rate auto'
+Exec:  ssh map13 'sudo iwconfig wlan0 rate auto'
+Exec:  ssh map14 'sudo iwconfig wlan0 rate auto'
+Exec:  ssh map15 'sudo iwconfig wlan0 rate auto'
+Exec:  ssh map16 'sudo iwconfig wlan0 rate auto'
+Killed by signal 2.
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo iwconfig ath0 rate auto'"
+Exec:  ssh map1 'sudo iwconfig ath0 rate auto'
+Exec:  ssh map2 'sudo iwconfig ath0 rate auto'
+Exec:  ssh map3 'sudo iwconfig ath0 rate auto'
+Exec:  ssh map4 'sudo iwconfig ath0 rate auto'
+Exec:  ssh map5 'sudo iwconfig ath0 rate auto'
+Exec:  ssh map7 'sudo iwconfig ath0 rate auto'
+Exec:  ssh map11 'sudo iwconfig ath0 rate auto'
+Exec:  ssh map12 'sudo iwconfig ath0 rate auto'
+Exec:  ssh map13 'sudo iwconfig ath0 rate auto'
+Exec:  ssh map14 'sudo iwconfig ath0 rate auto'
+Exec:  ssh map15 'sudo iwconfig ath0 rate auto'
+Exec:  ssh map16 'sudo iwconfig ath0 rate auto'
+Exec:  ssh map18 'sudo iwconfig ath0 rate auto'
+Exec:  ssh map19 'sudo iwconfig ath0 rate auto'
+Exec:  ssh map22 'sudo iwconfig ath0 rate auto'
+Exec:  ssh map25 'sudo iwconfig ath0 rate auto'
+Exec:  ssh map27 'sudo iwconfig ath0 rate auto'
+Exec:  ssh map28 'sudo iwconfig ath0 rate auto'
+Exec:  ssh map29 'sudo iwconfig ath0 rate auto'
+Killed by signal 2.
+Killed by signal 2.
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo /sbin/service smb stop'"
+-----------------------------------------------
+Cleanup routing
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo killall -9 olsrd-emulab olsrd-map'"
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo route del -host 1.0.0.1' " >& /dev/null
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo route del -host 2.0.0.1' " >& /dev/null
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo route del -host 1.0.0.2' " >& /dev/null
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo route del -host 2.0.0.2' " >& /dev/null
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo route del -host 1.0.0.3' " >& /dev/null
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo route del -host 2.0.0.3' " >& /dev/null
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo route del -host 1.0.0.4' " >& /dev/null
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo route del -host 2.0.0.4' " >& /dev/null
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo route del -host 1.0.0.5' " >& /dev/null
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo route del -host 2.0.0.5' " >& /dev/null
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo route del -host 1.0.0.6' " >& /dev/null
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo route del -host 2.0.0.6' " >& /dev/null
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo route del -host 1.0.0.7' " >& /dev/null
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo route del -host 2.0.0.7' " >& /dev/null
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo route del -host 1.0.0.8' " >& /dev/null
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo route del -host 2.0.0.8' " >& /dev/null
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo route del -host 1.0.0.9' " >& /dev/null
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo route del -host 2.0.0.9' " >& /dev/null
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo route del -host 1.0.0.10' " >& /dev/null
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo route del -host 2.0.0.10' " >& /dev/null
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo route del -host 1.0.0.11' " >& /dev/null
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo route del -host 2.0.0.11' " >& /dev/null
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo route del -host 1.0.0.12' " >& /dev/null
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo route del -host 2.0.0.12' " >& /dev/null
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo route del -host 1.0.0.13' " >& /dev/null
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo route del -host 2.0.0.13' " >& /dev/null
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo route del -host 1.0.0.14' " >& /dev/null
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo route del -host 2.0.0.14' " >& /dev/null
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo route del -host 1.0.0.15' " >& /dev/null
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo route del -host 2.0.0.15' " >& /dev/null
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo route del -host 1.0.0.16' " >& /dev/null
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo route del -host 2.0.0.16' " >& /dev/null
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo route del -host 1.0.0.17' " >& /dev/null
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo route del -host 2.0.0.17' " >& /dev/null
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo route del -host 1.0.0.18' " >& /dev/null
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo route del -host 2.0.0.18' " >& /dev/null
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo route del -host 1.0.0.19' " >& /dev/null
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo route del -host 2.0.0.19' " >& /dev/null
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo route del -host 1.0.0.20' " >& /dev/null
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo route del -host 2.0.0.20' " >& /dev/null
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo route del -host 1.0.0.21' " >& /dev/null
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo route del -host 2.0.0.21' " >& /dev/null
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo route del -host 1.0.0.22' " >& /dev/null
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo route del -host 2.0.0.22' " >& /dev/null
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo route del -host 1.0.0.23' " >& /dev/null
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo route del -host 2.0.0.23' " >& /dev/null
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo route del -host 1.0.0.24' " >& /dev/null
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo route del -host 2.0.0.24' " >& /dev/null
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo route del -host 1.0.0.25' " >& /dev/null
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo route del -host 2.0.0.25' " >& /dev/null
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo route del -host 1.0.0.26' " >& /dev/null
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo route del -host 2.0.0.26' " >& /dev/null
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo route del -host 1.0.0.27' " >& /dev/null
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo route del -host 2.0.0.27' " >& /dev/null
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo route del -host 1.0.0.28' " >& /dev/null
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo route del -host 2.0.0.28' " >& /dev/null
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo route del -host 1.0.0.29' " >& /dev/null
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo route del -host 2.0.0.29' " >& /dev/null
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo route del -host 1.0.0.30' " >& /dev/null
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo route del -host 2.0.0.30' " >& /dev/null
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo route del -host 1.0.0.31' " >& /dev/null
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo route del -host 2.0.0.31' " >& /dev/null
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo route del -host 1.0.0.32' " >& /dev/null
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo route del -host 2.0.0.32' " >& /dev/null
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo route del -host 1.0.0.33' " >& /dev/null
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo route del -host 2.0.0.33' " >& /dev/null
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo route del -host 1.0.0.34' " >& /dev/null
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo route del -host 2.0.0.34' " >& /dev/null
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo route del -host 1.0.0.35' " >& /dev/null
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo route del -host 2.0.0.35' " >& /dev/null
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo route del -host 1.0.0.36' " >& /dev/null
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo route del -host 2.0.0.36' " >& /dev/null
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo route del -host 1.0.0.37' " >& /dev/null
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo route del -host 2.0.0.37' " >& /dev/null
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo route del -host 1.0.0.38' " >& /dev/null
+./do-perhost.pl -t 120 -c 200 -f TOPOS/MAP.TXT "ssh @HOST@ 'sudo route del -host 2.0.0.38' " >& /dev/null
+-----------------------------------------------
+-----------------------------------------------
+rm -rf ping && mkdir ping && rm -rf iperf && mkdir iperf
+ssh map1 'ping -R -i 1 -c 10 1.0.0.2' >& ping/map1-map2.log

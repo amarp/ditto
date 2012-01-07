@@ -1,0 +1,112 @@
+This is the distribution containing source files and scripts
+corresponding to the Ditto project at CMU.  For an overview of the
+project, please refer to our MobiCom 2008 paper entitled "Ditto: A
+System for Opportunistic Caching in Multi-hop Wireless Mesh
+Networks".
+
+Authors
+Fahad Dogar, Amar Phanishayee, Himabindu Pucha, Olatunji Ruwase, David Andersen.
+
+------------------------------
+Contents of the Distribution
+------------------------------
+copy_src_and_rebuild.sh         - use this script to unzip DOT, patch the source files with Ditto source, and build Ditto
+ditto.patch                     - patch file to copy over Ditto changes to the DOT source tree
+ext/                            - contains the DOT and OLSR distributions/tarballs
+src/                            - contains Ditto source code
+scripts/                        - scripts to run experiments, parse and graph results
+
+
+-----------------------------------
+Installation tips
+-----------------------------------
+Note: We used GNU/Linux as our platform for development and testing.
+
+Install the following packages (Ubuntu)
+> autoconf
+> autoconftools-dev
+> automake1.9
+> libtool
+> libgmp3-dev (already had libgmp3c2)
+> libssl-dev
+> tcsh
+
+for Ditto you need to install an additional package
+> libpcap-dev
+
+
+To build and install Ditto you can use the copy_src_and_rebuild.sh
+script.  Set the BASE_DIR variable according to your setup.  This
+script extracts the DOT distribution, applies the Ditto patches to the
+DOT source tree, builds sfslite and Ditto.
+
+If you want to do this one step at a time, here are the instructions
+
+The first 3 steps have to do with installing DOT.  You can refer to "How
+to access and use DOT" (http://www.cs.cmu.edu/~dot-project/howto.html)
+and check the README files in sfslite and the DOT root directories for
+further information.
+
+1. untar ext/dot_snap_20070206.tar.gz to a directory of your liking (BASEDIR)
+   let SRC_DIR=${BASE_DIR}/dot_snap_20070206
+2. build sfslite
+    cd $SRC_DIR/sfslite
+    autoreconf -f -i -s
+    ./configure --prefix=$SRC_DIR/sfslite/install
+    make
+    make install
+3. build DOT
+   cd $SRC_DIR
+   autoreconf -i -s
+   ./configure --with-sfs=${SRC_DIR}/sfslite --prefix=${INSTALL_DIR}
+   make clean
+   make
+   make install
+   sudo ln -s ${SRC_DIR}/install/bin/gcp /usr/local/bin/
+
+Once you have DOT built and running (try the test scripts in ${SRC_DIR}/test)
+4. Either 
+        copy over the Ditto source files from src/ to SRC_DIR
+   OR
+        cp ditto.patch ${SRC_DIR}/
+        cd ${SRC_DIR}/
+        patch -f -p1 < ditto.patch
+
+5. Rebuild sfslite and DOT/Ditto (perform steps 2 and 3 again)
+   you can use ${SRC_DIR}/rebuild.sh for subsequent builds
+
+-----------------------------------
+Overview of scripts
+-----------------------------------
+TODO: explain scripts
+${SRC_DIR}/rebuild.sh
+${SRC_DIR}/build_chunk_sizes.sh
+${SRC_DIR}/push.sh
+${BASE_DIR}/scripts/control-0.pl
+${BASE_DIR}/scripts/control-1.pl
+${BASE_DIR}/scripts/xput-control-1.pl
+${BASE_DIR}/scripts/xput-control-random.pl
+
+Also explain how the following work
+${BASE_DIR}/scripts/do-perhost.pl
+${BASE_DIR}/scripts/monitor.pl
+${BASE_DIR}/scripts/copy-stuff.pl
+${BASE_DIR}/scripts/get-stuff.pl
+
+
+----------------------------------------
+Desciption of graph plotting scripts
+----------------------------------------
+TODO: explain scripts
+
+
+------------------------------------------------------------
+Location of logs for experiments for the MobiCom 2008 paper
+------------------------------------------------------------
+This is only useful for people within the group at CMU.
+Logs can be found at: /disk/agami1/aphanish/share
+
+A brief description of the experimental runs that the log directories
+correspond to can be found in
+a) /disk/agami1/aphanish/share/emulab/README.txt
+b) /disk/agami1/aphanish/share/map/README.txt
